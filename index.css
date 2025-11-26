@@ -156,10 +156,13 @@ section {
     height: 100%;
 }
 .grid-item {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 35%;
     border-radius: var(--gap);
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+    }
 }
 .grid-item1 {
     grid-row: span 2 / span 2;
@@ -169,42 +172,41 @@ section {
 .grid-item2 {
     grid-column: span 2 / span 2;
 
-    #billboard & {
-        background-image: url(img/foto-klien/billboard1.jpg);
+    #billboard & img {
+        top: -200px;
     }
-    #branding & {
-        background-image: url(img/foto-klien/branding1.jpg);
+    #branding & img {
+        top: -200px;
     }
-    #interior & {
-        background-image: url(img/foto-klien/interior1.jpg);
+    #interior & img {
+        top: -50px;
     }
 }
 .grid-item3 {
     grid-column-start: 2;
     grid-row-start: 2;
 
-    #billboard & {
-        background-image: url(img/foto-klien/billboard2.jpg);
+    #billboard & img {
+        top: -70px;
     }
-    #branding & {
-        background-image: url(img/foto-klien/branding2.jpg);
+    #branding & img {
+        top: -50px;
     }
-    #interior & {
-        background-image: url(img/foto-klien/interior2.jpg);
+    #interior & img {
+        top: -60px;
+        left: -80px;
+        max-width: 150%;
     }
 }
 .grid-item4 {
     grid-column-start: 3;
     grid-row-start: 2;
 
-    #billboard & {
-        background-image: url(img/foto-klien/billboard3.jpg);
+    #billboard & img {
+        top: -50px;
     }
-    #branding & {
-        background-image: url(img/foto-klien/branding3.jpg);
-    }
-    #interior & {
-        background-image: url(img/foto-klien/interior3.jpg);
+    #branding & img {
+        top: -30px;
     }
 }
 
