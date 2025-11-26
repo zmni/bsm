@@ -9,32 +9,32 @@
         <meta property="og:title" content="Bintang Surya Madani">
         <meta property="og:type" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
         <meta property="og:url" content="https://bintangsuryamadani.com/">
-        <meta property="og:image" content="favicon.png">
+        <meta property="og:image" content="logo.png">
         <meta property="og:image:alt" content="">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css" integrity="sha256-JcSaLRKKm0DaqxxJ8dvr792f1ZiQFbnJIOwunbjZjsU=" crossorigin="anonymous">
         <link rel="stylesheet" href="index.css">
 
-        <link rel="icon" href="favicon.png" sizes="any">
-        <link rel="apple-touch-icon" href="favicon.png">
+        <link rel="icon" href="logo.png" sizes="any">
+        <link rel="apple-touch-icon" href="logo.png">
     </head>
 
     <body>
 
-        <section id="home">
+        <section id="bsm-home">
             <header>
-                <a href="/"><img class="logo" src="logo.svg"></a>
+                <a class="logo" href="/" alt="Logo"><img src="logo.png"></a>
                 <nav>
                     <a href="/">Home</a>
-                    <a href="#works">Works</a>
-                    <a href="#clients">Clients</a>
-                    <a href="#contact">Contact</a>
+                    <a id="scrollTo-works">Works</a>
+                    <a id="scrollTo-clients">Clients</a>
+                    <a id="scrollTo-contact">Contact</a>
                 </nav>
             </header>
             <main>
-                <div id="home-intro" class="grad">
-                    <div>
+                <div class="intro gradient">
+                    <div class="intro-text">
                         <h1>Bintang Surya Madani</h1>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -47,93 +47,123 @@
             </main>
         </section>
 
-        <section id="works">
+        <section id="bsm-works">
             <header>
-                <a href="/"><img class="logo" src="logo.svg"></a>
+                <a class="logo" href="/" alt="Logo"><img src="logo.png"></a>
                 <h2>Our Works</h2>
-                <nav>
-                    <a class="slide-nav slide0">Works</a>
-                    <a class="slide-nav slide1">Billboard</a>
-                    <a class="slide-nav slide2">Branding</a>
-                    <a class="slide-nav slide3">Interior</a>
+                <nav class="swiper-pagination">
+                    <!-- <a id="swipeTo-slide0">Works</a>
+                    <a id="swipeTo-slide1">Billboard</a>
+                    <a id="swipeTo-slide2">Branding</a>
+                    <a id="swipeTo-slide3">Interior</a> -->
                 </nav>
             </header>
             <main>
                 <div class="swiper">
                     <div class="swiper-wrapper">
 
-                        <div id="work" class="swiper-slide">
-                            <div class="cards grad">
-                                <div class="card">
-                                    <img  class="card-img" src="img/card/billboard.jpg" loading="lazy">
-                                    <h3 class="card-title">Billboard</h3>
-                                    <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <!-- <a class="card-button slide-nav slide1">Detail</a> -->
+                        <div class="swiper-slide">
+                            <div class="cards gradient">
+                                <div class="card c1">
+                                    <div class="card-image">
+                                        <img src="img/card/billboard.jpg" loading="lazy">
+                                    </div>
+                                    <div class="card-text">
+                                        <h3>Billboard</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna
+                                            aliqua.</p>
+                                    </div>
                                 </div>
-                                <div class="card">
-                                    <img class="card-img" src="img/card/branding.jpg" loading="lazy">
-                                    <h3 class="card-title">Branding</h3>
-                                    <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <!-- <a class="card-button slide-nav slide2">Detail</a> -->
+                                <div class="card c2">
+                                    <div class="card-image">
+                                        <img src="img/card/branding.jpg" loading="lazy">
+                                    </div>
+                                    <div class="card-text">
+                                        <h3>Branding</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna
+                                            aliqua.</p>
+                                    </div>
                                 </div>
-                                <div class="card">
-                                    <img class="card-img" src="img/card/interior.jpg" loading="lazy">
-                                    <h3 class="card-title">Interior</h3>
-                                    <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <!-- <a class="card-button slide-nav slide3">Detail</a> -->
+                                <div class="card c3">
+                                    <div class="card-image">
+                                        <img src="img/card/interior.jpg" loading="lazy">
+                                    </div>
+                                    <div class="card-text">
+                                        <h3>Interior</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna
+                                            aliqua.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="billboard" class="swiper-slide">
-                            <div class="grid">
-                                <div class="grid-item grid-item1">
-                                    <h1>Billboard</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="swiper-slide">
+                            <div class="grids">
+                                <div class="grid grid-text g1">
+                                    <h3>Billboard</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                        nulla pariatur.</p>
                                 </div>
-                                <div class="grid-item grid-item2">
+                                <div class="grid grid-image g2 bb">
                                     <img src="img/foto-klien/billboard1.jpg" loading="lazy">
                                 </div>
-                                <div class="grid-item grid-item3">
+                                <div class="grid grid-image g3">
                                     <img src="img/foto-klien/billboard2.jpg" loading="lazy">
                                 </div>
-                                <div class="grid-item grid-item4">
+                                <div class="grid grid-image g4">
                                     <img src="img/foto-klien/billboard3.jpg" loading="lazy">
                                 </div>
                             </div>
                         </div>
 
-                        <div id="branding" class="swiper-slide">
-                            <div class="grid">
-                                <div class="grid-item grid-item1">
-                                    <h1>Branding</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="swiper-slide">
+                            <div class="grids">
+                                <div class="grid grid-text g1">
+                                    <h3>Branding</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                        nulla pariatur.</p>
                                 </div>
-                                <div class="grid-item grid-item2">
+                                <div class="grid grid-image g2">
                                     <img src="img/foto-klien/branding1.jpg" loading="lazy">
                                 </div>
-                                <div class="grid-item grid-item3">
+                                <div class="grid grid-image g3">
                                     <img src="img/foto-klien/branding2.jpg" loading="lazy">
                                 </div>
-                                <div class="grid-item grid-item4">
+                                <div class="grid grid-image g4">
                                     <img src="img/foto-klien/branding3.jpg" loading="lazy">
                                 </div>
                             </div>
                         </div>
 
-                        <div id="interior" class="swiper-slide">
-                            <div class="grid">
-                                <div class="grid-item grid-item1">
-                                    <h1>Interior</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="swiper-slide">
+                            <div class="grids">
+                                <div class="grid grid-text g1">
+                                    <h3>Interior</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                        nulla pariatur.</p>
                                 </div>
-                                <div class="grid-item grid-item2">
+                                <div class="grid grid-image g2">
                                     <img src="img/foto-klien/interior1.jpg" loading="lazy">
                                 </div>
-                                <div class="grid-item grid-item3">
+                                <div class="grid grid-image g3">
                                     <img src="img/foto-klien/interior2.jpg" loading="lazy">
                                 </div>
-                                <div class="grid-item grid-item4">
+                                <div class="grid grid-image g4">
                                     <img src="img/foto-klien/interior3.jpg" loading="lazy">
                                 </div>
                             </div>
@@ -144,73 +174,95 @@
             </main>
         </section>
 
-        <section id="clients">
+        <section id="bsm-clients">
             <header>
-                <a href="/"><img class="logo" src="logo.svg"></a>
+                <a class="logo" href="/"><img src="logo.png"></a>
                 <h2>Our Clients</h2>
             </header>
             <main>
-                <div class="client">
-                    <img src="img/logo-klien/bantul.png" alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah" title=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
-                    <img src="img/logo-klien/kementrian.png" alt="Kementrian Koordinator Bidang Perekonomian Republik Indonesia" title="Kementrian Koordinator Bidang Perekonomian Republik Indonesia">
-                    <img src="img/logo-klien/pemda.svg" alt="Pemda Yogyakarta" title="Pemda Yogyakarta">
-                </div>
-                <div class="client">
-                    <img src="img/logo-klien/telkom.png" alt="Telkom" title="Telkom">
-                    <img src="img/logo-klien/pertamina.svg" alt="Pertamina" title="Pertamina">
-                    <img src="img/logo-klien/gojek.png" alt="Gojek" title="Gojek">
-                    <img src="img/logo-klien/grab.png" alt="Grab" title="Grab">
-                </div>
-                <div class="client">
-                    <img src="img/logo-klien/honda.png" alt="Honda" title="Honda">
-                    <img src="img/logo-klien/mitsubishi.png" alt="Mitsubishi" title="Mitsubishi">
-                    <img src="img/logo-klien/alkaline.svg" alt="ABC Alkaline" title="ABC Alkaline">
-                    <img src="img/logo-klien/rsud.png" alt="RSUD Panembahan Senopati" title="RSUD Panembahan Senopati">
-                    <img src="img/logo-klien/umy.svg" alt="Universitas Muhammadiyah Yogyakarta" title="Universitas Muhammadiyah Yogyakarta">
-                    <img src="img/logo-klien/bpd-diy.png" alt="BPD DIY" title="BPD DIY">
-                </div>
-                <div class="client">
-                    <img src="img/logo-klien/citranet.png" alt="Citranet" title="Citranet">
-                    <img src="img/logo-klien/traveloka.svg" alt="Traveloka" title="Traveloka">
-                    <img src="img/logo-klien/biznet.svg" alt="Biznet" title="Biznet">
-
+                <div class="clients">
+                    <div class="client">
+                        <img src="img/logo-klien/bantul.png" alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah" title=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
+                        <img src="img/logo-klien/kementrian.png" alt="Kementrian Koordinator Bidang Perekonomian Republik Indonesia" title="Kementrian Koordinator Bidang Perekonomian Republik Indonesia">
+                        <img src="img/logo-klien/pemda.svg" alt="Pemda Yogyakarta" title="Pemda Yogyakarta">
+                    </div>
+                    <div class="client">
+                        <img src="img/logo-klien/telkom.png" alt="Telkom" title="Telkom">
+                        <img src="img/logo-klien/pertamina.svg" alt="Pertamina" title="Pertamina">
+                        <img src="img/logo-klien/gojek.png" alt="Gojek" title="Gojek">
+                        <img src="img/logo-klien/grab.png" alt="Grab" title="Grab">
+                    </div>
+                    <div class="client">
+                        <img src="img/logo-klien/honda.png" alt="Honda" title="Honda">
+                        <img src="img/logo-klien/mitsubishi.png" alt="Mitsubishi" title="Mitsubishi">
+                        <img src="img/logo-klien/alkaline.svg" alt="ABC Alkaline" title="ABC Alkaline">
+                        <img src="img/logo-klien/rsud.png" alt="RSUD Panembahan Senopati" title="RSUD Panembahan Senopati">
+                        <img src="img/logo-klien/umy.svg" alt="Universitas Muhammadiyah Yogyakarta" title="Universitas Muhammadiyah Yogyakarta">
+                        <img src="img/logo-klien/bpd-diy.png" alt="BPD DIY" title="BPD DIY">
+                    </div>
+                    <div class="client">
+                        <img src="img/logo-klien/citranet.png" alt="Citranet" title="Citranet">
+                        <img src="img/logo-klien/traveloka.svg" alt="Traveloka" title="Traveloka">
+                        <img src="img/logo-klien/biznet.svg" alt="Biznet" title="Biznet">
+                    </div>
                 </div>
             </main>
         </section>
 
-        <section id="contact">
+        <section id="bsm-contact">
             <main>
-                <img class="logo" src="logo.svg">
+                <a class="logo" href="/"><img src="logo.png"></a>
 
-                <div id="contact-info">
-                    <h4>Info selanjutnya</h4>
-                    <p>Jl. Tegal Watu
-                        <br>Gambiran UH 5. No 277b
-                        <br>Yogyakarta. 55161.</p>
+                <div class="kantor">
+                    <h4>Kantor</h4>
+                    <p class="alamat">
+                        Jl. Tegal Watu,
+                        <br>Gambiran UH 5, no.277b
+                        <br>Yogyakarta. 55161.
+                    </p>
+                    <p class="kontak">
+                        <a href="mailto:bsm@gmail.com">Email</a>
+                        <a href="https://wa.me/628123456789">WhatsApp</a>
+                    </p>
                 </div>
 
-                <div id="contact-nav">
-                    <a class="footer-link" href="https://www.whatsapp.com/">WhatsApp</a>
-                    <a class="footer-link" href="https://www.instagram.com/">Instagram</a>
-                    <a class="footer-link" href="https://www.facebook.com/">Facebook</a>
-                    <a class="footer-link" href="https://x.com/">X/Twitter</a>
-                    <a class="footer--link email" href="mailto:#">Email: bsm@gmail.com</a>
+                <div class="medsos">
+                    <a href="https://www.instagram.com/">Instagram</a>
+                    <a href="https://www.facebook.com/">Facebook</a>
+                    <a href="https://x.com/">X/Twitter</a>
                 </div>
             </main>
         </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js" integrity="sha256-VZZw+/YDjikr/eFRrTH8wJ1wbA6oypz5vHlB4e61WrE=" crossorigin="anonymous"></script>
         <script>
+            var menu = ['Works', 'Billboard', 'Branding', 'Interior'];
             const swiper = new Swiper('.swiper', {
-                direction: 'horizontal'
+                direction: 'horizontal',
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                       return '<span class="' + className + '">' + (menu[index]) + '</span>';
+                    }
+                }
             });
-            function sliderNav(elem, n) {
-                document.querySelector(elem).addEventListener('click', () => swiper.slideTo(n));
-            }
-            sliderNav('.slide0', 0);
-            sliderNav('.slide1', 1);
-            sliderNav('.slide2', 2);
-            sliderNav('.slide3', 3);
+
+            // document.getElementById(elem).addEventListener('click', () => swiper.slideTo(i));
+
+            (() => {
+                const obj = {
+                    'scrollTo-works': 'bsm-works',
+                    'scrollTo-clients': 'bsm-clients',
+                    'scrollTo-contact': 'bsm-contact'
+                };
+                for (const [key, val] of Object.entries(obj)) {
+                    document.getElementById(key).addEventListener('click', () => {
+                        document.getElementById(val).scrollIntoView({ behavior: 'smooth' });
+                    });
+                }
+            })();
         </script>
     </body>
 </html>
