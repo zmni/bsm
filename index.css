@@ -38,6 +38,8 @@ img {
     flex-direction: column;
     border-bottom: 1px solid #00f;
     overflow: hidden;
+    max-width: 1140px;
+    margin: auto;
 }
 .section-header {
     display: flex;
@@ -307,13 +309,17 @@ img {
 
 /* CLIENTS
  */
-.section-client {
+.section-clients {
+    border-bottom: 0;
     height: auto;
 }
 .clients {
     margin-top: calc(var(--gap) * -1);
+    width: 100%;
 }
 .client {
+    text-align: center;
+
     img {
         max-height: 40px;
         margin: 10px;
@@ -345,6 +351,7 @@ img {
     background-color: rgb(0 0 255 / 0.5);
 
     height: auto;
+    max-width: none;
 
     h4 {
         margin: 0;
@@ -352,6 +359,9 @@ img {
 
     .section-content {
         gap: var(--gap);
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
     }
 
     a:not(.logo) {
