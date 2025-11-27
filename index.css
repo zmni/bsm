@@ -74,6 +74,7 @@ img {
     text-align: center;
 
     > * {
+        font-weight: 600;
         line-height: 1;
     }
 
@@ -136,12 +137,6 @@ img {
     @media (min-width: 992px) {
         background-image: none;
         background-position: right bottom;
-    }
-
-    .section-nav {
-        a {
-            font-weight: 600;
-        }
     }
 
     .section-content {
@@ -264,7 +259,7 @@ img {
     display: grid;
     gap: var(--gap);
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
     grid-template-areas:
         "g1"
         "g2"
