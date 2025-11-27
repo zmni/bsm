@@ -308,10 +308,13 @@ img {
 }
 
 /* CLIENTS
- */
+*/
 .section-clients {
     border-bottom: 0;
-    height: auto;
+
+    .section-content {
+        padding-bottom: calc(var(--gap) * 3);
+    }
 }
 .clients {
     margin-top: calc(var(--gap) * -1);
