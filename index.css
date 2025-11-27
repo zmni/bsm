@@ -38,7 +38,7 @@ img {
     flex-direction: column;
     border-bottom: 1px solid #00f;
     overflow: hidden;
-    max-width: 1140px;
+    max-width: 90%;
     margin: auto;
 }
 .section-header {
@@ -355,7 +355,7 @@ img {
     .section-content {
         gap: var(--gap);
         width: 100%;
-        max-width: 1140px;
+        max-width: 90%;
         margin: auto;
     }
 
