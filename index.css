@@ -138,6 +138,12 @@ img {
         background-position: right bottom;
     }
 
+    .section-nav {
+        a {
+            font-weight: 600;
+        }
+    }
+
     .section-content {
         align-items: center;
     }
