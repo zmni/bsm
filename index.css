@@ -312,19 +312,13 @@ img {
 
 /* CLIENTS
  */
-#bsm-clients {
+.section-client {
     height: auto;
-
-    main {
-        justify-content: center;
-    }
 }
 .clients {
-    width: 100%;
+    margin-top: calc(var(--gap) * -1);
 }
 .client {
-    text-align: center;
-
     img {
         max-height: 40px;
         margin: 10px;
