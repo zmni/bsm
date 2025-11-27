@@ -22,50 +22,43 @@
 
     <body>
 
-        <section id="bsm-home">
-            <header>
+        <section id="bsm-home" class="section section-home">
+            <header class="section-header">
                 <a class="logo" href="/" alt="Logo"><img src="logo.png"></a>
-                <nav>
+                <nav class="section-nav">
                     <a href="/">Home</a>
                     <a id="scrollTo-works">Works</a>
                     <a id="scrollTo-clients">Clients</a>
                     <a id="scrollTo-contact">Contact</a>
                 </nav>
             </header>
-            <main>
-                <div class="intro gradient">
-                    <div class="intro-text">
-                        <h1>Bintang Surya Madani</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
+            <main class="section-content">
+                <div class="intro">
+                    <h1>Bintang Surya Madani</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                    </p>
                 </div>
             </main>
         </section>
 
-        <section id="bsm-works">
-            <header>
+        <section id="bsm-works" class="section section-works">
+            <header class="section-header">
                 <a class="logo" href="/" alt="Logo"><img src="logo.png"></a>
                 <h2>Our Works</h2>
-                <nav class="swiper-pagination">
-                    <!-- <a id="swipeTo-slide0">Works</a>
-                    <a id="swipeTo-slide1">Billboard</a>
-                    <a id="swipeTo-slide2">Branding</a>
-                    <a id="swipeTo-slide3">Interior</a> -->
-                </nav>
+                <nav class="section-nav swiper-pagination"></nav>
             </header>
-            <main>
+            <main class="section-content">
                 <div class="swiper">
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide">
-                            <div class="cards gradient">
-                                <div class="card c1">
-                                    <div class="card-image">
+                            <div class="cards">
+                                <div id="billboardCard" class="card c1">
+                                    <div class="card-image image-centered">
                                         <img src="img/card/billboard.jpg" loading="lazy">
                                     </div>
                                     <div class="card-text">
@@ -75,8 +68,8 @@
                                             aliqua.</p>
                                     </div>
                                 </div>
-                                <div class="card c2">
-                                    <div class="card-image">
+                                <div id="brandingCard" class="card c2">
+                                    <div class="card-image image-centered">
                                         <img src="img/card/branding.jpg" loading="lazy">
                                     </div>
                                     <div class="card-text">
@@ -86,8 +79,8 @@
                                             aliqua.</p>
                                     </div>
                                 </div>
-                                <div class="card c3">
-                                    <div class="card-image">
+                                <div id="interiorCard" class="card c3">
+                                    <div class="card-image image-centered">
                                         <img src="img/card/interior.jpg" loading="lazy">
                                     </div>
                                     <div class="card-text">
@@ -111,13 +104,13 @@
                                         reprehenderit in voluptate velit esse cillum dolore eu fugiat
                                         nulla pariatur.</p>
                                 </div>
-                                <div class="grid grid-image g2 bb">
+                                <div class="grid grid-image g2 image-centered">
                                     <img src="img/foto-klien/billboard1.jpg" loading="lazy">
                                 </div>
-                                <div class="grid grid-image g3">
+                                <div class="grid grid-image g3 image-centered">
                                     <img src="img/foto-klien/billboard2.jpg" loading="lazy">
                                 </div>
-                                <div class="grid grid-image g4">
+                                <div class="grid grid-image g4 image-centered">
                                     <img src="img/foto-klien/billboard3.jpg" loading="lazy">
                                 </div>
                             </div>
@@ -134,13 +127,13 @@
                                         reprehenderit in voluptate velit esse cillum dolore eu fugiat
                                         nulla pariatur.</p>
                                 </div>
-                                <div class="grid grid-image g2">
+                                <div class="grid grid-image g2 image-centered">
                                     <img src="img/foto-klien/branding1.jpg" loading="lazy">
                                 </div>
-                                <div class="grid grid-image g3">
+                                <div class="grid grid-image g3 image-centered">
                                     <img src="img/foto-klien/branding2.jpg" loading="lazy">
                                 </div>
-                                <div class="grid grid-image g4">
+                                <div class="grid grid-image g4 image-centered">
                                     <img src="img/foto-klien/branding3.jpg" loading="lazy">
                                 </div>
                             </div>
@@ -157,29 +150,33 @@
                                         reprehenderit in voluptate velit esse cillum dolore eu fugiat
                                         nulla pariatur.</p>
                                 </div>
-                                <div class="grid grid-image g2">
+                                <div class="grid grid-image g2 image-centered">
                                     <img src="img/foto-klien/interior1.jpg" loading="lazy">
                                 </div>
-                                <div class="grid grid-image g3">
+                                <div class="grid grid-image g3 image-centered">
                                     <img src="img/foto-klien/interior2.jpg" loading="lazy">
                                 </div>
-                                <div class="grid grid-image g4">
+                                <div class="grid grid-image g4 image-centered">
                                     <img src="img/foto-klien/interior3.jpg" loading="lazy">
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
+                    <div class="swiper-navigation-button swiper-button-prev"></div>
+                    <div class="swiper-navigation-button swiper-button-next"></div>
+
                 </div>
             </main>
         </section>
 
-        <section id="bsm-clients">
-            <header>
+        <section id="bsm-clients" class="section section-clients">
+            <header class="section-header">
                 <a class="logo" href="/"><img src="logo.png"></a>
                 <h2>Our Clients</h2>
             </header>
-            <main>
+            <main class="section-content">
                 <div class="clients">
                     <div class="client">
                         <img src="img/logo-klien/bantul.png" alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah" title=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
@@ -209,8 +206,8 @@
             </main>
         </section>
 
-        <section id="bsm-contact">
-            <main>
+        <section id="bsm-contact" class="section section-contact">
+            <main class="section-content">
                 <a class="logo" href="/"><img src="logo.png"></a>
 
                 <div class="kantor">
@@ -239,7 +236,11 @@
             var menu = ['Works', 'Billboard', 'Branding', 'Interior'];
             const swiper = new Swiper('.swiper', {
                 direction: 'horizontal',
-
+                spaceBetween: 1,
+                // navigation: {
+                //     prevEl: '.swiper-button-prev',
+                //     nextEl: '.swiper-button-next',
+                // },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
@@ -249,7 +250,9 @@
                 }
             });
 
-            // document.getElementById(elem).addEventListener('click', () => swiper.slideTo(i));
+            document.getElementById('billboardCard').addEventListener('click', () => swiper.slideTo(1));
+            document.getElementById('brandingCard').addEventListener('click', () => swiper.slideTo(2));
+            document.getElementById('interiorCard').addEventListener('click', () => swiper.slideTo(3));
 
             (() => {
                 const obj = {
