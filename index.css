@@ -131,7 +131,7 @@ img {
     background-position: left bottom;
     background-repeat: no-repeat;
 
-    height: 100dvh;
+    height: 100vh;
 
     @media (min-width: 992px) {
         background-image: none;
