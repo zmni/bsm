@@ -75,16 +75,14 @@ img {
 .section-nav {
     text-align: center;
 
-    > * {
+    a,
+    span {
+        cursor: pointer;
         font-weight: 600;
         line-height: 1;
-    }
-
-    a {
-        cursor: pointer;
         text-transform: uppercase;
-        padding: .25em .5em;
-        border-radius: .25em;
+        border-radius: 5px;
+        padding: .5em .75em;
 
         &:hover {
             background-color: rgb(255 255 0 / 0.5);
@@ -105,14 +103,8 @@ img {
     &.swiper-pagination-bullets.swiper-pagination-horizontal {
         width: auto;
     }
-    .swiper-pagination-bullet {
-        text-transform: uppercase;
-        border-radius: 5px;
-        padding: .5em .75em;
-
-        &:hover {
-            background-color: var(--swiper-pagination-color);
-        }
+    .swiper-pagination-bullet:hover {
+        background-color: var(--swiper-pagination-color);
     }
 
     @media (min-width: 992px) {
