@@ -305,7 +305,7 @@ section {
         transition: transform .25s;
 
         &:hover {
-            transform: scale(1.15);
+            transform: scale(1.05);
         }
     }
 }
@@ -361,7 +361,7 @@ section {
         }
     }
 }
-.wa-api-fix {
+.wa-floating-button {
     position: fixed;
     right: var(--gap);
     bottom: var(--gap);
