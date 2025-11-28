@@ -1,267 +1,475 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
+<html lang="id">
+<head>
+    <meta charset="utf-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bintang Surya Madani</title>
-        <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <title>Bintang Surya Madani</title>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
 
-        <meta property="og:title" content="Bintang Surya Madani">
-        <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-        <meta property="og:image" content="logo.png">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://zmni.github.io/bsm/">
+    <meta property="og:title" content="Bintang Surya Madani">
+    <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <meta property="og:image" content="icons/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zmni.github.io/bsm/">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css" integrity="sha256-JcSaLRKKm0DaqxxJ8dvr792f1ZiQFbnJIOwunbjZjsU=" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="icons/logo.png" sizes="any">
+    <link rel="apple-touch-icon" href="icons/logo.png">
 
-        <link rel="icon" href="logo.png" sizes="any">
-        <link rel="apple-touch-icon" href="logo.png">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css" rel="stylesheet" integrity="sha256-JcSaLRKKm0DaqxxJ8dvr792f1ZiQFbnJIOwunbjZjsU=" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.css" integrity="sha256-ng8HIWt+GfNEXZQG0L7QBCsNfLq8VTGFTGvlMlT0CsA=" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+</head>
 
-    <body>
+<body id="bsm">
 
-        <section id="bsm-home" class="section section-home">
-            <header class="section-header">
-                <a class="logo" href="." alt="Logo"><img src="logo.png"></a>
-                <nav class="section-nav">
-                    <a href=".">Home</a>
-                    <a id="scrollTo-works">Works</a>
-                    <a id="scrollTo-clients">Clients</a>
-                    <a id="scrollTo-contact">Contact</a>
-                </nav>
-            </header>
-            <main class="section-content">
-                <div class="intro">
-                    <h1>Bintang Surya Madani</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </main>
-        </section>
+    <!-- INTRO -->
+    <section id="intro">
+        <!-- HEADER -->
+        <header class="header sticky">
+            <a class="logo" href="."><img src="icons/logo.png"></a>
+            <nav class="nav">
+                <a class="nav-item" href=".">Home</a>
+                <a class="nav-item js-main-nav-work">Work</a>
+                <a class="nav-item js-main-nav-porto">Portofolio</a>
+                <a class="nav-item js-main-nav-client">Client</a>
+                <a class="nav-item js-main-nav-contact">Contact</a>
+            </nav>
+        </header>
+        <!--/ HEADER -->
 
-        <section id="bsm-works" class="section section-works">
-            <header class="section-header">
-                <a class="logo" href="." alt="Logo"><img src="logo.png"></a>
-                <h2>Our Works</h2>
-                <nav class="section-nav swiper-pagination"></nav>
-            </header>
-            <main class="section-content">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
+        <!-- HERO -->
+        <div class="hero">
+            <div class="hero-text">
+                <h1 class="hero-title">Bintang Surya Madani</h1>
+                <p class="hero-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+            </div>
+        </div>
+        <!--/ HERO -->
+    </section>
+    <!--/ INTRO -->
 
-                        <div class="swiper-slide">
-                            <div class="cards">
-                                <div id="billboardCard" class="card c1">
-                                    <div class="card-image image-centered">
-                                        <img src="img/card/billboard.jpg" loading="lazy">
-                                    </div>
-                                    <div class="card-text">
-                                        <h3>Billboard</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua.</p>
-                                    </div>
+    <!--STATS-->
+    <section id="stats">
+        <div class="stat exp">
+            <span class="num">
+                <span id="js-stat-year-digit" class="digit">10</span><span id="js-stat-year-unit" class="unit"></span>
+            </span>
+            <span class="desc">Years of Experience</span>
+        </div>
+        <div class="stat spot">
+            <span class="num">
+                <span id="js-stat-spot-digit" class="digit">1</span><span id="js-stat-spot-unit" class="unit">K+</span>
+            </span>
+            <span class="desc">Strategic Point</span>
+        </div>
+        <div class="stat client">
+            <span class="num">
+                <span id="js-stat-client-digit" class="digit">10</span><span id="js-stat-client-unit" class="unit">K+</span>
+            </span>
+            <span class="desc">Happy Clients</span>
+        </div>
+        <div class="stat rating">
+            <span class="num">
+                <span id="js-stat-rating-digit" class="digit">4,9</span><span id="js-stat-rating-unit" class="unit"></span>
+            </span>
+            <span class="desc">Approval Rating</span>
+        </div>
+    </section>
+    <!--/STATS-->
+
+    <!-- WORK -->
+     <section id="work">
+        <header class="header work-header">
+            <h2 class="title">Our Work</h2>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <nav class="nav work-nav swiper-pagination"></nav>
+        </header>
+
+        <main class="content">
+            <div class="swiper work-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="work-index">
+                            <div class="index billboard">
+                                <div class="image">
+                                    <img src="images/card/billboard.jpg" loading="lazy">
                                 </div>
-                                <div id="brandingCard" class="card c2">
-                                    <div class="card-image image-centered">
-                                        <img src="img/card/branding.jpg" loading="lazy">
-                                    </div>
-                                    <div class="card-text">
-                                        <h3>Branding</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua.</p>
-                                    </div>
-                                </div>
-                                <div id="interiorCard" class="card c3">
-                                    <div class="card-image image-centered">
-                                        <img src="img/card/interior.jpg" loading="lazy">
-                                    </div>
-                                    <div class="card-text">
-                                        <h3>Interior</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="grids">
-                                <div class="grid grid-text g1">
+                                <div class="text">
                                     <h3>Billboard</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur.</p>
-                                </div>
-                                <div class="grid grid-image g2 image-centered">
-                                    <img src="img/foto-klien/billboard1.jpg" loading="lazy">
-                                </div>
-                                <div class="grid grid-image g3 image-centered">
-                                    <img src="img/foto-klien/billboard2.jpg" loading="lazy">
-                                </div>
-                                <div class="grid grid-image g4 image-centered">
-                                    <img src="img/foto-klien/billboard3.jpg" loading="lazy">
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua.</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="grids">
-                                <div class="grid grid-text g1">
+                            <div class="index branding">
+                                <div class="image">
+                                    <img src="images/card/branding.jpg" loading="lazy">
+                                </div>
+                                <div class="text">
                                     <h3>Branding</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur.</p>
-                                </div>
-                                <div class="grid grid-image g2 image-centered">
-                                    <img src="img/foto-klien/branding1.jpg" loading="lazy">
-                                </div>
-                                <div class="grid grid-image g3 image-centered">
-                                    <img src="img/foto-klien/branding2.jpg" loading="lazy">
-                                </div>
-                                <div class="grid grid-image g4 image-centered">
-                                    <img src="img/foto-klien/branding3.jpg" loading="lazy">
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua.</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="grids">
-                                <div class="grid grid-text g1">
+                            <div class="index interior">
+                                <div class="image">
+                                    <img src="images/card/interior.jpg" loading="lazy">
+                                </div>
+                                <div class="text">
                                     <h3>Interior</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur.</p>
-                                </div>
-                                <div class="grid grid-image g2 image-centered">
-                                    <img src="img/foto-klien/interior1.jpg" loading="lazy">
-                                </div>
-                                <div class="grid grid-image g3 image-centered">
-                                    <img src="img/foto-klien/interior2.jpg" loading="lazy">
-                                </div>
-                                <div class="grid grid-image g4 image-centered">
-                                    <img src="img/foto-klien/interior3.jpg" loading="lazy">
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua.</p>
                                 </div>
                             </div>
                         </div>
+                    </div><!--/work-index-->
 
-                    </div>
+                    <div class="swiper-slide">
+                        <div class="work-item">
+                            <div class="text">
+                                <h3>Billboard</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur.</p>
+                            </div>
+                            <div class="image image1">
+                                <img src="images/work/billboard1.jpg" loading="lazy">
+                            </div>
+                            <div class="image image2">
+                                <img src="images/work/billboard2.jpg" loading="lazy">
+                            </div>
+                            <div class="image image3">
+                                <img src="images/work/billboard3.jpg" loading="lazy">
+                            </div>
+                        </div>
+                    </div><!--/work-item.billboard-->
+
+                    <div class="swiper-slide">
+                        <div class="work-item">
+                            <div class="text">
+                                <h3>Branding</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur.</p>
+                            </div>
+                            <div class="image image1">
+                                <img src="images/work/branding1.jpg" loading="lazy">
+                            </div>
+                            <div class="image image2">
+                                <img src="images/work/branding2.jpg" loading="lazy">
+                            </div>
+                            <div class="image image3">
+                                <img src="images/work/branding3.jpg" loading="lazy">
+                            </div>
+                        </div>
+                    </div><!--/work-item.branding-->
+
+                    <div class="swiper-slide">
+                        <div class="work-item">
+                            <div class="text">
+                                <h3>Interior</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur.</p>
+                            </div>
+                            <div class="image image1">
+                                <img src="images/work/interior1.jpg" loading="lazy">
+                            </div>
+                            <div class="image image2">
+                                <img src="images/work/interior2.jpg" loading="lazy">
+                            </div>
+                            <div class="image image3">
+                                <img src="images/work/interior3.jpg" loading="lazy">
+                            </div>
+                        </div>
+                    </div><!--/work-item.interior-->
 
                 </div>
-            </main>
-        </section>
+            </div>
+        </main>
+     </section>
+    <!--/ WORK -->
 
-        <section id="bsm-clients" class="section section-clients">
-            <header class="section-header">
-                <a class="logo" href="."><img src="logo.png"></a>
-                <h2>Our Clients</h2>
-            </header>
-            <main class="section-content">
-                <div class="clients">
-                    <div class="client">
-                        <img src="img/logo-klien/kementrian.png" alt="Kementrian Koordinator Bidang Perekonomian Republik Indonesia" title="Kementrian Koordinator Bidang Perekonomian Republik Indonesia">
-                        <img src="img/logo-klien/pemda.svg" alt="Pemda Yogyakarta" title="Pemda Yogyakarta">
-                        <img src="img/logo-klien/bantul.png" alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah" title=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
+    <!-- TESTIMONIAL -->
+     <section id="testimonial">
+        <header class="header testimonial-header">
+            <h2 class="title">Testimonial</h2>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </header>
+
+        <main class="content">
+            <div class="testimonial-wrapper">
+
+                <div class="testimonial-item">
+                    <div class="text">
+                        <i class="bi bi-quote"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-                    <div class="client">
-                        <img src="img/logo-klien/telkom.png" alt="Telkom" title="Telkom">
-                        <img src="img/logo-klien/pertamina.svg" alt="Pertamina" title="Pertamina">
-                        <img src="img/logo-klien/gojek.png" alt="Gojek" title="Gojek">
-                        <img src="img/logo-klien/grab.png" alt="Grab" title="Grab">
+                    <div class="user">
+                        <div class="name">
+                            <p class="fn">Bagoes</p>
+                            <span class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <i class="pp bi bi-person-square"></i>
+                        </div>
                     </div>
-                    <div class="client">
-                        <img src="img/logo-klien/honda.png" alt="Honda" title="Honda">
-                        <img src="img/logo-klien/mitsubishi.png" alt="Mitsubishi" title="Mitsubishi">
-                        <img src="img/logo-klien/alkaline.svg" alt="ABC Alkaline" title="ABC Alkaline">
-                        <img src="img/logo-klien/rsud.png" alt="RSUD Panembahan Senopati" title="RSUD Panembahan Senopati">
-                        <img src="img/logo-klien/umy.svg" alt="Universitas Muhammadiyah Yogyakarta" title="Universitas Muhammadiyah Yogyakarta">
-                        <img src="img/logo-klien/bpd-diy.png" alt="BPD DIY" title="BPD DIY">
+                </div><!--/testimonial-item-->
+                <div class="testimonial-item">
+                    <div class="text">
+                        <i class="bi bi-quote"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-                    <div class="client">
-                        <img src="img/logo-klien/traveloka.svg" alt="Traveloka" title="Traveloka">
-                        <img src="img/logo-klien/biznet.svg" alt="Biznet" title="Biznet">
-                        <img src="img/logo-klien/citranet.png" alt="Citranet" title="Citranet">
+                    <div class="user">
+                        <div class="name">
+                            <p class="fn">Abdullah</p>
+                            <span class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <i class="pp bi bi-person-square"></i>
+                        </div>
                     </div>
+                </div><!--/testimonial-item-->
+                <div class="testimonial-item">
+                    <div class="text">
+                        <i class="bi bi-quote"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="user">
+                        <div class="name">
+                            <p class="fn">Indah</p>
+                            <span class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <i class="pp bi bi-person-square"></i>
+                        </div>
+                    </div>
+                </div><!--/testimonial-item-->
+                <div class="testimonial-item">
+                    <div class="text">
+                        <i class="bi bi-quote"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="user">
+                        <div class="name">
+                            <p class="fn">Pak Udin</p>
+                            <span class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <i class="pp bi bi-person-square"></i>
+                        </div>
+                    </div>
+                </div><!--/testimonial-item-->
+                <div class="testimonial-item">
+                    <div class="text">
+                        <i class="bi bi-quote"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="user">
+                        <div class="name">
+                            <p class="fn">Ibu Salsabila</p>
+                            <span class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <i class="pp bi bi-person-square"></i>
+                        </div>
+                    </div>
+                </div><!--/testimonial-item-->
+                <div class="testimonial-item">
+                    <div class="text">
+                        <i class="bi bi-quote"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="user">
+                        <div class="name">
+                            <p class="fn">Gunawan</p>
+                            <span class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                        </div>
+                        <div class="photo">
+                            <i class="pp bi bi-person-square"></i>
+                        </div>
+                    </div>
+                </div><!--/testimonial-item-->
+
+            </div>
+        </main>
+    </section>
+    <!--/ TESTIMONIAL -->
+
+    <!-- PORTOFOLIO -->
+    <section id="portofolio">
+        <header class="header portofolio-header">
+            <h2 class="title">Portofolio</h2>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </header>
+
+        <main class="content">
+            <div class="portofolio-gallery">
+                <img src="https://picsum.photos/300?random=1">
+                <img src="https://picsum.photos/300/350?random=2">
+                <img src="https://picsum.photos/300/600?random=3">
+                <img src="https://picsum.photos/300/400?random=4">
+                <img src="https://picsum.photos/300?random=5">
+                <img src="https://picsum.photos/300/400?random=6">
+                <img src="https://picsum.photos/300/700?random=7">
+                <img src="https://picsum.photos/400?random=8">
+                <img src="https://picsum.photos/300/400?random=9">
+                <img src="https://picsum.photos/300/500?random=10">
+                <img src="https://picsum.photos/400?random=11">
+                <img src="https://picsum.photos/300/400?random=12">
+                <img src="https://picsum.photos/300/500?random=13">
+                <img src="https://picsum.photos/300/400?random=14">
+                <img src="https://picsum.photos/300/600?random=15">
+                <img src="https://picsum.photos/300?random=16">
+                <img src="https://picsum.photos/300?random=17">
+                <img src="https://picsum.photos/300/600?random=18">
+            </div>
+        </main>
+    </section>
+    <!--/ PORTOFOLIO -->
+
+    <!-- CLIENT -->
+    <section id="client">
+        <header class="header client-header">
+            <h2 class="title">Our Clients</h2>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </header>
+
+        <main class="content">
+            <div class="klien">
+                <div class="klien-item">
+                    <img src="images/klien/kementrian.png" alt="Kementrian Koordinator Bidang Perekonomian Republik Indonesia" title="Kementrian Koordinator Bidang Perekonomian Republik Indonesia">
+                    <img src="images/klien/pemda.svg" alt="Pemda Yogyakarta" title="Pemda Yogyakarta">
+                    <img src="images/klien/bantul.png" alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah" title=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
                 </div>
-            </main>
-        </section>
-
-        <section id="bsm-contact" class="section section-contact">
-            <main class="section-content">
-                <a class="logo" href="."><img src="logo.png"></a>
-
-                <div class="kantor">
-                    <h4>Kantor</h4>
-                    <p class="alamat">
-                        Jl. Tegal Watu,
-                        <br>Gambiran UH 5, no.277b
-                        <br>Yogyakarta. 55161.
-                    </p>
-                    <p class="kontak">
-                        <a href="mailto:&#098;&#115;&#109;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Email</a>
-                        <a href="https://wa.me/628123456789">WhatsApp</a>
-                    </p>
+                <div class="klien-item">
+                    <img src="images/klien/telkom.png" alt="Telkom" title="Telkom">
+                    <img src="images/klien/pertamina.svg" alt="Pertamina" title="Pertamina">
+                    <img src="images/klien/gojek.png" alt="Gojek" title="Gojek">
+                    <img src="images/klien/grab.png" alt="Grab" title="Grab">
                 </div>
-
-                <div class="medsos">
-                    <a href="https://www.instagram.com/">Instagram</a>
-                    <a href="https://www.facebook.com/">Facebook</a>
-                    <a href="https://x.com/">X/Twitter</a>
+                <div class="klien-item">
+                    <img src="images/klien/honda.png" alt="Honda" title="Honda">
+                    <img src="images/klien/mitsubishi.png" alt="Mitsubishi" title="Mitsubishi">
+                    <img src="images/klien/alkaline.svg" alt="ABC Alkaline" title="ABC Alkaline">
+                    <img src="images/klien/rsud.png" alt="RSUD Panembahan Senopati" title="RSUD Panembahan Senopati">
+                    <img src="images/klien/umy.svg" alt="Universitas Muhammadiyah Yogyakarta" title="Universitas Muhammadiyah Yogyakarta">
+                    <img src="images/klien/bpd-diy.png" alt="BPD DIY" title="BPD DIY">
                 </div>
-            </main>
-        </section>
+                <div class="klien-item">
+                    <img src="images/klien/traveloka.svg" alt="Traveloka" title="Traveloka">
+                    <img src="images/klien/biznet.svg" alt="Biznet" title="Biznet">
+                    <img src="images/klien/citranet.png" alt="Citranet" title="Citranet">
+                </div>
+            </div>
+        </main>
+    </section>
+    <!--/CLIENT-->
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js" integrity="sha256-VZZw+/YDjikr/eFRrTH8wJ1wbA6oypz5vHlB4e61WrE=" crossorigin="anonymous"></script>
-        <script>
-            var menu = ['Works', 'Billboard', 'Branding', 'Interior'];
-            const swiper = new Swiper('.swiper', {
-                direction: 'horizontal',
-                spaceBetween: 1,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                       return '<span class="' + className + '">' + (menu[index]) + '</span>';
-                    }
-                }
-            });
+    <!--CONTACT-->
+    <footer id="contact">
+        <div class="contact-wrapper">
+            <a class="logo" href="."><img src="icons/logo.png"></a>
 
-            document.getElementById('billboardCard').addEventListener('click', () => swiper.slideTo(1));
-            document.getElementById('brandingCard').addEventListener('click', () => swiper.slideTo(2));
-            document.getElementById('interiorCard').addEventListener('click', () => swiper.slideTo(3));
+            <div class="kantor">
+                <h4>Contact Us</h4>
+                <p class="alamat">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Jl. Tegal Watu, Gambiran UH 5, no.277b. Yogyakarta. 55161
+                </p>
+                <p class="email">
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:&#098;&#115;&#109;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">bsm@gmail.com</a>
+                </p>
+                <p class="telpon">
+                    <i class="bi bi-telephone-fill"></i>
+                    +62 812-345-6789
+                </p>
+                <p class="whatsapp">
+                    <i class="bi bi-whatsapp"></i>
+                    <a href="https://api.whatsapp.com/send?phone=628123456789&text=Halo..">+62 812-345-6789</a>
+                </p>
+            </div>
 
-            (() => {
-                const obj = {
-                    'scrollTo-works': 'bsm-works',
-                    'scrollTo-clients': 'bsm-clients',
-                    'scrollTo-contact': 'bsm-contact'
-                };
-                for (const [key, val] of Object.entries(obj)) {
-                    document.getElementById(key).addEventListener('click', () => {
-                        document.getElementById(val).scrollIntoView({ behavior: 'smooth' });
-                    });
-                }
-            })();
-        </script>
-    </body>
+            <div class="medsos">
+                <h4>Social Media</h4>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!--/ CONTACT -->
+
+    <!-- KONTAK WA FIXED -->
+    <a class="wa-api-fix" href="https://api.whatsapp.com/send?phone=628123456789&text=Halo..">
+        <img src="icons/whatsapp.png">
+    </a>
+    <!--/ KONTAK WA FIXED -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js" integrity="sha256-VZZw+/YDjikr/eFRrTH8wJ1wbA6oypz5vHlB4e61WrE=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.js" integrity="sha256-NRMGvtPp/+ljYVhBZZk+3NQNvEqNLn0rAtTODPuUylw=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
 </html>
