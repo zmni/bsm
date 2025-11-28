@@ -2,14 +2,14 @@
 // MAIN MENU
 //
 const navObj = {
-    '.js-main-nav-work': 'work',
-    '.js-main-nav-porto': 'porto',
-    '.js-main-nav-client': 'client',
-    '.js-main-nav-contact': 'contact'
+    '.js-main-nav-work': '.work-header',
+    '.js-main-nav-porto': '.portofolio-header',
+    '.js-main-nav-client': '.client-header',
+    '.js-main-nav-contact': '.contact-info'
 };
 for (const [key, val] of Object.entries(navObj)) {
     document.querySelector(key).addEventListener('click', () => {
-        document.getElementById(val).scrollIntoView({ behavior: 'smooth' });
+        document.querySelector(val).scrollIntoView({ behavior: 'smooth' });
     });
 }
 
@@ -19,7 +19,7 @@ for (const [key, val] of Object.entries(navObj)) {
 var workMenu = ['Work', 'Billboard', 'Branding', 'Interior'];
 const workSwiper = new Swiper('.work-swiper', {
     direction: 'horizontal',
-    spaceBetween: 1,
+    spaceBetween: 20,
     loop: true,
     pagination: {
         el: '.work-nav',

@@ -159,13 +159,23 @@ section {
 
 /* WORK
  */
+.work-index,
+.work-item {
+    padding: 1px;
+}
 .work-index {
     .index {
         cursor: pointer;
         background-color: lightblue;
+        border: 1px solid rgb(0 0 0 / .25);
         border-radius: var(--gap);
         margin-bottom: var(--gap);
         overflow: hidden;
+        transition: all .25s;
+
+        &:hover {
+            border-color: rgb(0 0 0 / .5);
+        }
 
         .image {
             aspect-ratio: 16/9;
@@ -192,8 +202,13 @@ section {
     .text,
     .image {
         border-radius: var(--gap);
+        border: 1px solid rgb(0 0 0 / .25);
         margin-bottom: var(--gap);
-        overflow: hidden;
+        transition: all .25s;
+
+        &:hover {
+            border-color: rgb(0 0 0 / .5);
+        }
     }
     .text {
         background-color: lightblue;
@@ -219,20 +234,28 @@ section {
  */
 #testimonial {
     padding: 0;
+
+    .content {
+        background-color: lightgray;
+    }
 }
 .testimonial-wrapper {
-    background-color: lightgray;
     display: flex;
     gap: 0 var(--gap);
-    margin-bottom: var(--gap);
     padding: var(--gap);
     overflow-x: auto;
 }
 .testimonial-item {
     flex: 0 0 400px;
     background-color: salmon;
+    border: 1px solid rgb(0 0 0 / .125);
     border-radius: var(--gap-h);
     padding: var(--gap);
+    transition: transform .25s;
+
+    &:hover {
+        transform: scale(1.015);
+    }
 
     .text {
         font-size: 1.25rem;
@@ -310,7 +333,7 @@ section {
     background-color: rgb(0 0 255 / .25);
     border-top: 1px solid gray;
 }
-.contact-wrapper {
+.contact-info {
     padding: var(--gap-x5) var(--gap);
 
     .kantor,
@@ -375,7 +398,7 @@ section {
     /* INTRO
      */
      #intro {
-        background-position: center bottom -100px, center bottom;
+        background-position: right bottom -100px, center bottom;
         background-size: contain;
     }
 
@@ -466,8 +489,10 @@ section {
             text-align: right;
         }
     }
-    .contact-wrapper {
+    .contact-info {
         display: flex;
         gap: 0 var(--gap-x3);
+        padding-left: var(--gap-x5);
+        padding-right: var(--gap-x5);
     }
 }
