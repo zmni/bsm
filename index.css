@@ -365,16 +365,20 @@ section {
     position: fixed;
     right: var(--gap);
     bottom: var(--gap);
-    height: var(--gap-x2);
-    width: var(--gap-x2);
+    z-index: 9999;
 
-    border-radius: 100%;
-    box-shadow: 0 0 5px rgb(0 0 0 / .5);
+    img {
+        height: var(--gap-x3);
+        width: var(--gap-x3);
 
-    transition: transform .25s;
+        border-radius: 100%;
+        box-shadow: 0 0 5px rgb(0 0 0 / .5);
 
-    &:hover {
-        transform: scale(1.15);
+        transition: transform .25s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
     }
 }
 
