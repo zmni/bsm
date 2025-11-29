@@ -2,39 +2,20 @@
 // MAIN MENU
 //
 const navObj = {
-    '.js-main-nav-work': '.work-header',
-    '.js-main-nav-porto': '.portofolio-header',
-    '.js-main-nav-client': '.client-header',
-    '.js-main-nav-contact': '.contact-info'
+    '.js-main-nav-work': '.work',
+    '.js-main-nav-porto': '.portofolio',
+    '.js-main-nav-client': '.client',
+    '.js-main-nav-contact': '.contact'
 };
 for (const [key, val] of Object.entries(navObj)) {
-    document.querySelector(key).addEventListener('click', () => {
+    document.querySelector(key).addEventListener('click', (ev) => {
+        ev.preventDefault();
         document.querySelector(val).scrollIntoView({ behavior: 'smooth' });
     });
 }
 
 //
-// SWIPER
-//
-var workMenu = ['Work', 'Billboard', 'Branding', 'Interior'];
-const workSwiper = new Swiper('.work-swiper', {
-    direction: 'horizontal',
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-        el: '.work-nav',
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (workMenu[index]) + '</span>';
-        }
-    }
-});
-document.querySelector('.index.billboard').addEventListener('click', () => workSwiper.slideTo(1));
-document.querySelector('.index.branding').addEventListener('click', () => workSwiper.slideTo(2));
-document.querySelector('.index.interior').addEventListener('click', () => workSwiper.slideTo(3));
-
-//
-// COUNTER
+// STATS
 //
 
 // Variabel global untuk menyimpan ID timer aktif
@@ -96,7 +77,7 @@ const counterConfigurations = [
 // ------------------------------------------------------------------
 
 // 1. Dapatkan elemen parent yang akan dipantau
-const mainContainer = document.getElementById('stats');
+const mainContainer = document.querySelector('.stats');
 
 // 2. Callback untuk Observer
 const observerCallback = (entries) => {
@@ -143,12 +124,102 @@ const observerOptions = {
 const mainObserver = new IntersectionObserver(observerCallback, observerOptions);
 mainObserver.observe(mainContainer);
 
+//
+// WORK SWIPER
+//
+var workMenu = ['Work', 'Billboard', 'Branding', 'Interior'];
+const workSwiper = new Swiper('.js-work-swiper', {
+    direction: 'horizontal',
+    spaceBetween: 20,
+    autoHeight: true,
+    loop: true,
+    pagination: {
+        el: '.js-work-nav',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + ' px-2 py-1 rounded-3 text-reset">' + (workMenu[index]) + '</span>';
+        }
+    }
+});
+document.querySelector('.index.billboard').addEventListener('click', () => workSwiper.slideTo(1));
+document.querySelector('.index.branding').addEventListener('click', () => workSwiper.slideTo(2));
+document.querySelector('.index.interior').addEventListener('click', () => workSwiper.slideTo(3));
 
 //
-// TESTI SCROLL
+// TESTIMONIAL
 //
-const scrollContainer = document.querySelector(".testimonial-wrapper");
-scrollContainer.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
+// Ambil elemen-elemen yang diperlukan dari DOM
+const testimonialWrapper = document.querySelector('.js-testimonial-wrapper');
+const testimonialButtonLeft = document.querySelector('.js-testimonial-button-left');
+const testimonialButtonRight = document.querySelector('.js-testimonial-button-right');
+
+// Tentukan seberapa jauh scroll setiap kali tombol diklik
+const scrollDistance = 300; // Misalnya, gulir sejauh 300 piksel
+
+/**
+ * Fungsi untuk menggulir kontainer
+ * @param {number} amount - Jumlah piksel yang akan digulir (positif untuk kanan, negatif untuk kiri).
+ */
+function scrollContainer(amount) {
+    // Properti 'scrollLeft' digunakan untuk mengatur posisi horizontal scroll.
+    // 'behavior: "smooth"' memberikan efek gulir yang lebih halus.
+    testimonialWrapper.scrollBy({
+        left: amount,
+        behavior: 'smooth'
+    });
+}
+
+// Tambahkan event listener untuk tombol kiri
+testimonialButtonLeft.addEventListener('click', () => {
+    // Gulir ke kiri, jadi jumlahnya negatif
+    scrollContainer(-scrollDistance);
 });
+
+// Tambahkan event listener untuk tombol kanan
+testimonialButtonRight.addEventListener('click', () => {
+    // Gulir ke kanan, jadi jumlahnya positif
+    scrollContainer(scrollDistance);
+});
+
+// --- Scroll Mouse Wheel ---
+testimonialWrapper.addEventListener('wheel', (event) => {
+    // Memastikan guliran vertikal (bawaan browser) dinonaktifkan
+    event.preventDefault();
+
+    // Properti 'deltaY' pada event wheel memberikan nilai guliran vertikal (ke atas/bawah).
+    // Karena kita ingin menggulir secara horizontal, kita gunakan nilai deltaY untuk mengatur 'scrollLeft'.
+    // Nilai negatif deltaY berarti gulir ke atas (kita terjemahkan sebagai gulir ke KIRI).
+    // Nilai positif deltaY berarti gulir ke bawah (kita terjemahkan sebagai gulir ke KANAN).
+
+    testimonialWrapper.scrollBy({
+        left: event.deltaY, // Menggunakan deltaY untuk scroll horizontal (left)
+        behavior: 'auto' // Menggunakan 'auto' agar terasa lebih responsif seperti guliran biasa
+    });
+
+    // Panggil checkScrollPosition untuk memperbarui tampilan tombol setelah scroll
+    // checkScrollPosition();
+});
+
+// Sembunyikan tombol jika tidak ada lagi yang bisa di-scroll
+function checkScrollPosition() {
+    const { scrollLeft, scrollWidth, clientWidth } = testimonialWrapper;
+
+    // Tombol Kiri: Sembunyikan jika sudah di posisi paling kiri (scrollLeft <= 0)
+    if (scrollLeft <= 5) { // Beri sedikit margin untuk akurasi
+        testimonialButtonLeft.style.display = 'none';
+    } else {
+        testimonialButtonLeft.style.display = 'block';
+    }
+
+    // Tombol Kanan: Sembunyikan jika sudah di posisi paling kanan
+    // scrollWidth adalah total lebar konten, clientWidth adalah lebar kontainer yang terlihat.
+    if (scrollLeft + clientWidth >= scrollWidth - 5) { // Beri sedikit margin untuk akurasi
+        testimonialButtonRight.style.display = 'none';
+    } else {
+        testimonialButtonRight.style.display = 'block';
+    }
+}
+// Panggil saat halaman dimuat
+// checkScrollPosition();
+// Panggil setiap kali kontainer digulir
+// testimonialWrapper.addEventListener('scroll', checkScrollPosition);

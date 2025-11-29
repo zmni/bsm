@@ -20,185 +20,229 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css" rel="stylesheet" integrity="sha256-JcSaLRKKm0DaqxxJ8dvr792f1ZiQFbnJIOwunbjZjsU=" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4=" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.css" integrity="sha256-ng8HIWt+GfNEXZQG0L7QBCsNfLq8VTGFTGvlMlT0CsA=" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css" rel="stylesheet" integrity="sha256-JcSaLRKKm0DaqxxJ8dvr792f1ZiQFbnJIOwunbjZjsU=" crossorigin="anonymous">
+
     <link href="index.css" rel="stylesheet">
 </head>
 
-<body id="bsm">
+<body class="bg-body-tertiary">
 
-    <!-- INTRO -->
-    <section id="intro">
-        <!-- HEADER -->
-        <header class="header sticky">
-            <a class="logo" href="."><img src="icons/logo.png"></a>
-            <nav class="nav">
-                <a class="nav-item" href=".">Home</a>
-                <a class="nav-item js-main-nav-work">Work</a>
-                <a class="nav-item js-main-nav-porto">Portofolio</a>
-                <a class="nav-item js-main-nav-client">Client</a>
-                <a class="nav-item js-main-nav-contact">Contact</a>
-            </nav>
+    <section class="bsm">
+        <header class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-md-auto text-center text-md-center">
+                    <a href="."><img src="icons/logo.png" height="80"></a>
+                </div>
+                <div class="col-md">
+                    <nav class="nav justify-content-center justify-content-md-end mt-3 mt-md-0 text-uppercase">
+                        <a class="nav-link rounded-3 fw-semibold text-reset" href=".">Home</a>
+                        <a class="nav-link rounded-3 fw-semibold text-reset js-main-nav-work" href="#">Work</a>
+                        <a class="nav-link rounded-3 fw-semibold text-reset js-main-nav-porto" href="#">Portofolio</a>
+                        <a class="nav-link rounded-3 fw-semibold text-reset js-main-nav-client" href="#">Client</a>
+                        <a class="nav-link rounded-3 fw-semibold text-reset js-main-nav-contact" href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
         </header>
-        <!--/ HEADER -->
 
-        <!-- HERO -->
-        <div class="hero">
-            <div class="hero-text">
-                <h1 class="hero-title">Bintang Surya Madani</h1>
-                <p class="hero-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+        <div class="intro container mt-md-3 mb-md-5 rounded-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 text-center text-md-start">
+                    <div class="m-3 m-md-5">
+                        <h1 class="fw-semibold">Bintang Surya Madani</h1>
+                        <p class="fs-md-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 align-self-md-end">
+                    <img class="img-fluid" src="images/bsm.png">
+                </div>
             </div>
         </div>
-        <!--/ HERO -->
     </section>
-    <!--/ INTRO -->
 
     <!--STATS-->
-    <section id="stats">
-        <div class="stat exp">
-            <span class="num">
-                <span id="js-stat-year-digit" class="digit">10</span><span id="js-stat-year-unit" class="unit"></span>
-            </span>
-            <span class="desc">Years of Experience</span>
-        </div>
-        <div class="stat spot">
-            <span class="num">
-                <span id="js-stat-spot-digit" class="digit">1</span><span id="js-stat-spot-unit" class="unit">K+</span>
-            </span>
-            <span class="desc">Strategic Point</span>
-        </div>
-        <div class="stat client">
-            <span class="num">
-                <span id="js-stat-client-digit" class="digit">10</span><span id="js-stat-client-unit" class="unit">K+</span>
-            </span>
-            <span class="desc">Happy Clients</span>
-        </div>
-        <div class="stat rating">
-            <span class="num">
-                <span id="js-stat-rating-digit" class="digit">4,9</span><span id="js-stat-rating-unit" class="unit"></span>
-            </span>
-            <span class="desc">Approval Rating</span>
+    <section class="stats py-5 bg-info bg-gradient">
+        <div class="container">
+            <div class="row g-0 gx-2">
+                <div class="col-md-3">
+                    <div class="stat d-flex align-items-center justify-content-center column-gap-2 p-4">
+                        <span class="num fs-2 fw-bold">
+                            <span id="js-stat-year-digit" class="digit">10</span><span id="js-stat-year-unit" class="unit"></span>
+                        </span>
+                        <span class="desc text-uppercase">Years of Experience</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat d-flex align-items-center justify-content-center column-gap-2 p-4">
+                        <span class="num fs-2 fw-bold">
+                            <span id="js-stat-spot-digit" class="digit">1</span><span id="js-stat-spot-unit" class="unit">K+</span>
+                        </span>
+                        <span class="desc text-uppercase">Strategic Point</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat d-flex align-items-center justify-content-center column-gap-2 p-4">
+                        <span class="num fs-2 fw-bold">
+                            <span id="js-stat-client-digit" class="digit">10</span><span id="js-stat-client-unit" class="unit">K+</span>
+                        </span>
+                        <span class="desc text-uppercase">Happy Clients</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat d-flex align-items-center justify-content-center column-gap-2 p-4">
+                        <span class="num fs-2 fw-bold">
+                            <span id="js-stat-rating-digit" class="digit">4,9</span><span id="js-stat-rating-unit" class="unit"></span>
+                        </span>
+                        <span class="desc text-uppercase">Approval Rating</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!--/STATS-->
+    <!--/STAT-->
 
-    <!-- WORK -->
-     <section id="work">
-        <header class="header work-header">
-            <h2 class="title">Our Work</h2>
-            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <nav class="nav work-nav swiper-pagination"></nav>
+    <!--WORK-->
+    <section class="work my-5 py-5">
+        <header class="work-header container mb-5 px-md-5">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md">
+                    <h2 class="display-4 fw-semibold mb-md-0">Our Work</h2>
+                </div>
+                <div class="col-md-7">
+                    <p class="mb-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="col-md">
+                    <nav class="nav work-nav js-work-nav swiper-pagination justify-content-center justify-content-md-start flex-md-column align-items-md-end position-static transform-none fw-semibold text-uppercase"></nav>
+                </div>
+            </div>
         </header>
 
-        <main class="content">
-            <div class="swiper work-swiper">
+        <main class="work-content container">
+
+            <div class="swiper work-swiper js-work-swiper">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                        <div class="work-index">
-                            <div class="index billboard">
-                                <div class="image">
-                                    <img src="images/card/billboard.jpg" loading="lazy">
-                                </div>
-                                <div class="text">
-                                    <h3>Billboard</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua.</p>
+                        <div class="work-index row row-gap-4 py-1">
+                            <div class="billboard index col-md">
+                                <div class="card bg-info-subtle bg-gradient">
+                                    <img class="card-img-top ratio ratio-16x9" src="images/card/billboard.jpg" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Billboard</h3>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="index branding">
-                                <div class="image">
-                                    <img src="images/card/branding.jpg" loading="lazy">
-                                </div>
-                                <div class="text">
-                                    <h3>Branding</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua.</p>
+                            <div class="branding index col-md">
+                                <div class="card bg-info-subtle bg-gradient">
+                                    <img class="card-img-top ratio ratio-16x9" src="images/card/branding.jpg" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Branding</h3>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="index interior">
-                                <div class="image">
-                                    <img src="images/card/interior.jpg" loading="lazy">
-                                </div>
-                                <div class="text">
-                                    <h3>Interior</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua.</p>
+                            <div class="interior index col-md">
+                                <div class="card bg-info-subtle bg-gradient">
+                                    <img class="card-img-top ratio ratio-16x9" src="images/card/interior.jpg" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Interior</h3>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div><!--/work-index-->
 
-                    <div class="swiper-slide">
-                        <div class="work-item">
-                            <div class="text">
-                                <h3>Billboard</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                    nulla pariatur.</p>
+                    <div class="billboard work-item swiper-slide">
+                        <div class="row row-gap-4">
+                            <div class="col-md-5">
+                                <div class="card h-100 bg-primary-subtle">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Billboard</h3>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="image image1">
-                                <img src="images/work/billboard1.jpg" loading="lazy">
-                            </div>
-                            <div class="image image2">
-                                <img src="images/work/billboard2.jpg" loading="lazy">
-                            </div>
-                            <div class="image image3">
-                                <img src="images/work/billboard3.jpg" loading="lazy">
+                            <div class="col-md-7">
+                                <div class="card ratio ratio-4x3 img1">
+                                    <img class="card-img object-fit-cover" src="images/work/billboard1.jpg" loading="lazy">
+                                </div>
+                                <div class="row row-gap-4 mt-4">
+                                    <div class="col-md">
+                                        <div class="card ratio ratio-4x3 img2">
+                                            <img class="card-img object-fit-cover" src="images/work/billboard2.jpg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="card ratio ratio-4x3 img3">
+                                            <img class="card-img object-fit-cover" src="images/work/billboard3.jpg" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div><!--/work-item.billboard-->
 
-                    <div class="swiper-slide">
-                        <div class="work-item">
-                            <div class="text">
-                                <h3>Branding</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                    nulla pariatur.</p>
+                    <div class="branding work-item swiper-slide">
+                        <div class="row row-gap-4">
+                            <div class="col-md-5">
+                                <div class="card h-100 bg-primary-subtle">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Branding</h3>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="image image1">
-                                <img src="images/work/branding1.jpg" loading="lazy">
-                            </div>
-                            <div class="image image2">
-                                <img src="images/work/branding2.jpg" loading="lazy">
-                            </div>
-                            <div class="image image3">
-                                <img src="images/work/branding3.jpg" loading="lazy">
+                            <div class="col-md-7">
+                                <div class="card ratio ratio-4x3 img1">
+                                    <img class="card-img object-fit-cover" src="images/work/branding1.jpg" loading="lazy">
+                                </div>
+                                <div class="row row-gap-4 mt-4">
+                                    <div class="col-md">
+                                        <div class="card ratio ratio-4x3 img2">
+                                            <img class="card-img object-fit-cover" src="images/work/branding2.jpg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="card ratio ratio-4x3 img3">
+                                            <img class="card-img object-fit-cover" src="images/work/branding3.jpg" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div><!--/work-item.branding-->
 
-                    <div class="swiper-slide">
-                        <div class="work-item">
-                            <div class="text">
-                                <h3>Interior</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                    nulla pariatur.</p>
+                    <div class="interior work-item swiper-slide">
+                        <div class="row row-gap-4">
+                            <div class="col-md-5">
+                                <div class="card h-100 bg-primary-subtle">
+                                    <div class="card-body">
+                                        <h3 class="card-title">interior</h3>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="image image1">
-                                <img src="images/work/interior1.jpg" loading="lazy">
-                            </div>
-                            <div class="image image2">
-                                <img src="images/work/interior2.jpg" loading="lazy">
-                            </div>
-                            <div class="image image3">
-                                <img src="images/work/interior3.jpg" loading="lazy">
+                            <div class="col-md-7">
+                                <div class="card ratio ratio-4x3 img1">
+                                    <img class="card-img object-fit-cover" src="images/work/interior1.jpg" loading="lazy">
+                                </div>
+                                <div class="row row-gap-4 mt-4">
+                                    <div class="col-md">
+                                        <div class="card ratio ratio-4x3 img2">
+                                            <img class="card-img object-fit-cover" src="images/work/interior2.jpg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="card ratio ratio-4x3 img3">
+                                            <img class="card-img object-fit-cover" src="images/work/interior3.jpg" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div><!--/work-item.interior-->
@@ -206,243 +250,235 @@
                 </div>
             </div>
         </main>
-     </section>
-    <!--/ WORK -->
+    </section>
+    <!--/WORK-->
 
-    <!-- TESTIMONIAL -->
-     <section id="testimonial">
-        <header class="header testimonial-header">
-            <h2 class="title">Testimonial</h2>
-            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!--TESTIMONIAL-->
+    <section class="testimonial my-5 py-5">
+        <header class="testimonial-header header container mb-5 px-md-5">
+            <div class="row align-items-center">
+                <div class="col-md">
+                    <h2 class="display-4 fw-semibold mb-md-0 text-center text-md-start">Testimonial</h2>
+                </div>
+                <div class="col-md-auto">
+                    <nav class="nav testimonial-nav justify-content-center justify-content-md-end flex-nowrap column-gap-1 display-3">
+                        <span class="bi bi-arrow-left-circle js-testimonial-button-left cursor-pointer" role="button"></span>
+                        <span class="bi bi-arrow-right-circle js-testimonial-button-right cursor-pointer" role="button"></span>
+                    </nav>
+                </div>
+            </div>
         </header>
 
-        <main class="content">
-            <div class="testimonial-wrapper">
+        <main class="testimonial-content overflow-x-scroll">
+            <div class="testimonial-wrapper js-testimonial-wrapper container px-3 overflow-x-hidden">
 
-                <div class="testimonial-item">
-                    <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <div class="row flex-nowrap">
+                    <div class="col">
+                        <div class="testimonial-item card flex-shrink-0 p-3 text-bg-info">
+                            <blockquote class="blockquote fw-light">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </blockquote>
+                            <div class="card-footer user d-flex column-gap-3 align-items-center justify-content-end">
+                                <div class="name text-end">
+                                    <p class="fn fs-5 fw-bold m-0">Bagoes</p>
+                                    <p class="rating m-0 text-warning-emphasis">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </span>
+                                </div>
+                                <div class="photo bi bi-person-square display-1 text-primary-emphasis"></div>
+                            </div>
+                        </div><!--/testimonial-item-->
                     </div>
-                    <div class="user">
-                        <div class="name">
-                            <p class="fn">Bagoes</p>
-                            <span class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                        </div>
-                        <div class="photo">
-                            <i class="pp bi bi-person-square"></i>
-                        </div>
+                    <div class="col">
+                        <div class="testimonial-item card flex-shrink-0 p-3 text-bg-info">
+                            <blockquote class="blockquote fw-light">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </blockquote>
+                            <div class="card-footer user d-flex column-gap-3 align-items-center justify-content-end">
+                                <div class="name text-end">
+                                    <p class="fn fs-5 fw-bold m-0">Salsabila</p>
+                                    <p class="rating m-0 text-warning-emphasis">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </span>
+                                </div>
+                                <div class="photo bi bi-person-square display-1 text-primary-emphasis"></div>
+                            </div>
+                        </div><!--/testimonial-item-->
                     </div>
-                </div><!--/testimonial-item-->
-                <div class="testimonial-item">
-                    <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <div class="col">
+                        <div class="testimonial-item card flex-shrink-0 p-3 text-bg-info">
+                            <blockquote class="blockquote fw-light">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </blockquote>
+                            <div class="card-footer user d-flex column-gap-3 align-items-center justify-content-end">
+                                <div class="name text-end">
+                                    <p class="fn fs-5 fw-bold m-0">Ibu Angela</p>
+                                    <p class="rating m-0 text-warning-emphasis">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </span>
+                                </div>
+                                <div class="photo bi bi-person-square display-1 text-primary-emphasis"></div>
+                            </div>
+                        </div><!--/testimonial-item-->
                     </div>
-                    <div class="user">
-                        <div class="name">
-                            <p class="fn">Abdullah</p>
-                            <span class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                        </div>
-                        <div class="photo">
-                            <i class="pp bi bi-person-square"></i>
-                        </div>
+                    <div class="col">
+                        <div class="testimonial-item card flex-shrink-0 p-3 text-bg-info">
+                            <blockquote class="blockquote fw-light">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </blockquote>
+                            <div class="card-footer user d-flex column-gap-3 align-items-center justify-content-end">
+                                <div class="name text-end">
+                                    <p class="fn fs-5 fw-bold m-0">Kurniawan</p>
+                                    <p class="rating m-0 text-warning-emphasis">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </span>
+                                </div>
+                                <div class="photo bi bi-person-square display-1 text-primary-emphasis"></div>
+                            </div>
+                        </div><!--/testimonial-item-->
                     </div>
-                </div><!--/testimonial-item-->
-                <div class="testimonial-item">
-                    <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <div class="col">
+                        <div class="testimonial-item card flex-shrink-0 p-3 text-bg-info">
+                            <blockquote class="blockquote fw-light">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </blockquote>
+                            <div class="card-footer user d-flex column-gap-3 align-items-center justify-content-end">
+                                <div class="name text-end">
+                                    <p class="fn fs-5 fw-bold m-0">Pak Miko</p>
+                                    <p class="rating m-0 text-warning-emphasis">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </span>
+                                </div>
+                                <div class="photo bi bi-person-square display-1 text-primary-emphasis"></div>
+                            </div>
+                        </div><!--/testimonial-item-->
                     </div>
-                    <div class="user">
-                        <div class="name">
-                            <p class="fn">Indah</p>
-                            <span class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                        </div>
-                        <div class="photo">
-                            <i class="pp bi bi-person-square"></i>
-                        </div>
+                    <div class="col">
+                        <div class="testimonial-item card flex-shrink-0 p-3 text-bg-info">
+                            <blockquote class="blockquote fw-light">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </blockquote>
+                            <div class="card-footer user d-flex column-gap-3 align-items-center justify-content-end">
+                                <div class="name text-end">
+                                    <p class="fn fs-5 fw-bold m-0">Rudi Irawan</p>
+                                    <p class="rating m-0 text-warning-emphasis">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </span>
+                                </div>
+                                <div class="photo bi bi-person-square display-1 text-primary-emphasis"></div>
+                            </div>
+                        </div><!--/testimonial-item-->
                     </div>
-                </div><!--/testimonial-item-->
-                <div class="testimonial-item">
-                    <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                    <div class="user">
-                        <div class="name">
-                            <p class="fn">Pak Udin</p>
-                            <span class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                        </div>
-                        <div class="photo">
-                            <i class="pp bi bi-person-square"></i>
-                        </div>
-                    </div>
-                </div><!--/testimonial-item-->
-                <div class="testimonial-item">
-                    <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                    <div class="user">
-                        <div class="name">
-                            <p class="fn">Ibu Salsabila</p>
-                            <span class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                        </div>
-                        <div class="photo">
-                            <i class="pp bi bi-person-square"></i>
-                        </div>
-                    </div>
-                </div><!--/testimonial-item-->
-                <div class="testimonial-item">
-                    <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                    <div class="user">
-                        <div class="name">
-                            <p class="fn">Gunawan</p>
-                            <span class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                        </div>
-                        <div class="photo">
-                            <i class="pp bi bi-person-square"></i>
-                        </div>
-                    </div>
-                </div><!--/testimonial-item-->
-                <div class="testimonial-item">
-                    <div class="text">
-                        <i class="bi bi-quote"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                    <div class="user">
-                        <div class="name">
-                            <p class="fn">Kurniawan</p>
-                            <span class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </span>
-                        </div>
-                        <div class="photo">
-                            <i class="pp bi bi-person-square"></i>
-                        </div>
-                    </div>
-                </div><!--/testimonial-item-->
+                </div>
 
             </div>
         </main>
     </section>
-    <!--/ TESTIMONIAL -->
+    <!--/TESTIMONIAL-->
 
-    <!-- PORTOFOLIO -->
-    <section id="portofolio">
-        <header class="header portofolio-header">
-            <h2 class="title">Portofolio</h2>
-            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!--PORTOFOLIO-->
+    <section class="portofolio my-5 py-5">
+        <header class="portofolio-header container mb-5 px-md-5 text-center">
+            <div class="row flex-column align-items-center">
+                <div class="col-md">
+                    <h2 class="display-4 fw-semibold mb-md-0">Portofolio</h2>
+                </div>
+                <div class="col-md-10">
+                    <p class="mb-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
         </header>
 
-        <main class="content">
+        <main class="portofolio-content container">
             <div class="portofolio-gallery">
-                <img src="https://picsum.photos/300?random=1">
-                <img src="https://picsum.photos/300/350?random=2">
-                <img src="https://picsum.photos/300/600?random=3">
-                <img src="https://picsum.photos/300/400?random=4">
-                <img src="https://picsum.photos/300?random=5">
-                <img src="https://picsum.photos/300/400?random=6">
-                <img src="https://picsum.photos/300/700?random=7">
-                <img src="https://picsum.photos/400?random=8">
-                <img src="https://picsum.photos/300/400?random=9">
-                <img src="https://picsum.photos/300/500?random=10">
-                <img src="https://picsum.photos/400?random=11">
-                <img src="https://picsum.photos/300/400?random=12">
-                <img src="https://picsum.photos/300/500?random=13">
-                <img src="https://picsum.photos/300/400?random=14">
-                <img src="https://picsum.photos/300/600?random=15">
-                <img src="https://picsum.photos/300?random=16">
-                <img src="https://picsum.photos/300?random=17">
-                <img src="https://picsum.photos/300/600?random=18">
+                <div class="card"><img class="card-img" src="https://picsum.photos/300?random=1"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/350?random=2"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/600?random=3"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/400?random=4"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300?random=5"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/400?random=6"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/700?random=7"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/400?random=8"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/400?random=9"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/500?random=10"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/400?random=11"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/400?random=12"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/500?random=13"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/400?random=14"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/600?random=15"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300?random=16"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300?random=17"></div>
+                <div class="card"><img class="card-img" src="https://picsum.photos/300/600?random=18"></div>
             </div>
         </main>
     </section>
-    <!--/ PORTOFOLIO -->
+    <!--/PORTOFOLIO-->
 
-    <!-- CLIENT -->
-    <section id="client">
-        <header class="header client-header">
-            <h2 class="title">Our Clients</h2>
-            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!--CLIENT-->
+    <section class="client my-5 py-5">
+        <header class="client-header container mb-5 px-md-5 text-center">
+            <div class="row flex-column align-items-center">
+                <div class="col-md">
+                    <h2 class="display-4 fw-semibold mb-md-0">Our Clients</h2>
+                </div>
+                <div class="col-md-10">
+                    <p class="mb-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
         </header>
-
-        <main class="content">
-            <div class="klien">
-                <div class="klien-item">
-                    <img src="images/klien/kementrian.png" alt="Kementrian Koordinator Bidang Perekonomian Republik Indonesia" title="Kementrian Koordinator Bidang Perekonomian Republik Indonesia">
-                    <img src="images/klien/pemda.svg" alt="Pemda Yogyakarta" title="Pemda Yogyakarta">
-                    <img src="images/klien/bantul.png" alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah" title=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
-                </div>
-                <div class="klien-item">
-                    <img src="images/klien/telkom.png" alt="Telkom" title="Telkom">
-                    <img src="images/klien/pertamina.svg" alt="Pertamina" title="Pertamina">
-                    <img src="images/klien/gojek.png" alt="Gojek" title="Gojek">
-                    <img src="images/klien/grab.png" alt="Grab" title="Grab">
-                </div>
-                <div class="klien-item">
-                    <img src="images/klien/honda.png" alt="Honda" title="Honda">
-                    <img src="images/klien/mitsubishi.png" alt="Mitsubishi" title="Mitsubishi">
-                    <img src="images/klien/alkaline.svg" alt="ABC Alkaline" title="ABC Alkaline">
-                    <img src="images/klien/rsud.png" alt="RSUD Panembahan Senopati" title="RSUD Panembahan Senopati">
-                    <img src="images/klien/umy.svg" alt="Universitas Muhammadiyah Yogyakarta" title="Universitas Muhammadiyah Yogyakarta">
-                    <img src="images/klien/bpd-diy.png" alt="BPD DIY" title="BPD DIY">
-                </div>
-                <div class="klien-item">
-                    <img src="images/klien/traveloka.svg" alt="Traveloka" title="Traveloka">
-                    <img src="images/klien/biznet.svg" alt="Biznet" title="Biznet">
-                    <img src="images/klien/citranet.png" alt="Citranet" title="Citranet">
+        <main class="client-content container">
+            <div class="row">
+                <div class="col text-center">
+                    <ul class="list-unstyled">
+                        <li>
+                            <img class="img-fluid" src="images/klien/kementrian.png" alt="Kementrian Koordinator Bidang Perekonomian Republik Indonesia" title="Kementrian Koordinator Bidang Perekonomian Republik Indonesia">
+                            <img class="img-fluid" src="images/klien/pemda.svg" alt="Pemda Yogyakarta" title="Pemda Yogyakarta">
+                            <img class="img-fluid" src="images/klien/bantul.png" alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah" title=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
+                        </li>
+                        <li>
+                            <img class="img-fluid" src="images/klien/telkom.png" alt="Telkom" title="Telkom">
+                            <img class="img-fluid" src="images/klien/pertamina.svg" alt="Pertamina" title="Pertamina">
+                            <img class="img-fluid" src="images/klien/gojek.png" alt="Gojek" title="Gojek">
+                            <img class="img-fluid" src="images/klien/grab.png" alt="Grab" title="Grab">
+                        </li>
+                        <li>
+                            <img class="img-fluid" src="images/klien/honda.png" alt="Honda" title="Honda">
+                            <img class="img-fluid" src="images/klien/mitsubishi.png" alt="Mitsubishi" title="Mitsubishi">
+                            <img class="img-fluid" src="images/klien/alkaline.svg" alt="ABC Alkaline" title="ABC Alkaline">
+                            <img class="img-fluid" src="images/klien/rsud.png" alt="RSUD Panembahan Senopati" title="RSUD Panembahan Senopati">
+                            <img class="img-fluid" src="images/klien/umy.svg" alt="Universitas Muhammadiyah Yogyakarta" title="Universitas Muhammadiyah Yogyakarta">
+                            <img class="img-fluid" src="images/klien/bpd-diy.png" alt="BPD DIY" title="BPD DIY">
+                        </li>
+                        <li>
+                            <img class="img-fluid" src="images/klien/traveloka.svg" alt="Traveloka" title="Traveloka">
+                            <img class="img-fluid" src="images/klien/biznet.svg" alt="Biznet" title="Biznet">
+                            <img class="img-fluid" src="images/klien/citranet.png" alt="Citranet" title="Citranet">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </main>
@@ -450,48 +486,58 @@
     <!--/CLIENT-->
 
     <!--CONTACT-->
-    <footer id="contact">
-        <div class="contact-info">
-            <a class="logo" href="."><img src="icons/logo.png"></a>
-
-            <div class="kantor">
-                <h4>Contact Us</h4>
-                <p class="alamat">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    Jl. Tegal Watu, Gambiran UH 5, no.277b. Yogyakarta. 55161
-                </p>
-                <p class="email">
-                    <i class="bi bi-envelope-fill"></i>
-                    <a href="mailto:&#098;&#115;&#109;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">bsm@gmail.com</a>
-                </p>
-                <p class="telpon">
-                    <i class="bi bi-telephone-fill"></i>
-                    +62 812-345-6789
-                </p>
-                <p class="whatsapp">
-                    <i class="bi bi-whatsapp"></i>
-                    <a href="https://api.whatsapp.com/send?phone=628123456789&text=Halo..">+62 812-345-6789</a>
-                </p>
-            </div>
-
-            <div class="medsos">
-                <h4>Social Media</h4>
-                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-                <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+    <footer class="contact text-center text-md-start bg-primary-subtle bg-gradient">
+        <div class="container mt-5 py-5">
+            <div class="row">
+                <div class="col-md-auto">
+                    <a class="logo" href="."><img src="icons/logo.png" height="100"></a>
+                </div>
+                <div class="col-md-auto col-lg-1 sep"></div>
+                <div class="kantor col-md mt-5 mt-md-0">
+                    <h4>Contact Us</h4>
+                    <p class="alamat">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Jl. Tegal Watu, Gambiran UH 5, no.277b. Yogyakarta. 55161
+                    </p>
+                    <p class="email">
+                        <a class="icon-link text-reset text-decoration-none" href="mailto:&#098;&#115;&#109;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+                            <i class="bi bi-envelope-fill"></i>
+                            bsm@gmail.com
+                        </a>
+                    </p>
+                    <p class="telpon">
+                        <i class="bi bi-telephone-fill"></i>
+                        +62 812-345-6789
+                    </p>
+                    <p class="whatsapp">
+                        <a class="icon-link text-reset text-decoration-none" href="https://api.whatsapp.com/send?phone=628123456789&text=Halo..">
+                            <i class="bi bi-whatsapp"></i>
+                            +62 812-345-6789
+                        </a>
+                    </p>
+                </div>
+                <div class="medsos col-md-auto mt-5 mt-md-0 text-md-end">
+                    <h4>Social Media</h4>
+                    <span class="fs-1">
+                        <a class="icon-link" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                        <a class="icon-link" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                        <a class="icon-link" href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+                    </span>
+                </div>
             </div>
         </div>
     </footer>
-    <!--/ CONTACT -->
+    <!--/CONTACT-->
 
-    <!-- KONTAK WA FIXED -->
-    <a class="wa-floating-button" href="https://api.whatsapp.com/send?phone=628123456789&text=Halo..">
-        <img src="icons/whatsapp.png">
+    <!--WHATSAPP BUTTON-->
+    <a class="wa-floating-button d-block rounded-circle shadow overflow-hidden" href="https://api.whatsapp.com/send?phone=628123456789&text=Halo..">
+        <img src="icons/whatsapp.png" alt="WhatsApp">
     </a>
-    <!--/ KONTAK WA FIXED -->
+    <!--/WHATSAPP BUTTON-->
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha256-ew8UiV1pJH/YjpOEBInP1HxVvT/SfrCmwSoUzF9JIgc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js" integrity="sha256-VZZw+/YDjikr/eFRrTH8wJ1wbA6oypz5vHlB4e61WrE=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.js" integrity="sha256-NRMGvtPp/+ljYVhBZZk+3NQNvEqNLn0rAtTODPuUylw=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>
