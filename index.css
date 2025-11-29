@@ -293,6 +293,9 @@ section {
 
 /* PORTOFOLIO
  */
+#portofolio .content {
+    max-width: 1280px;
+}
 .portofolio-gallery {
     column-count: 3;
     column-gap: var(--gap);
