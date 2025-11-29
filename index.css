@@ -298,13 +298,13 @@ section {
 }
 .portofolio-gallery {
     column-count: 3;
-    column-gap: var(--gap);
+    column-gap: var(--gap-h);
 
     img {
         break-inside: avoid;
         border-radius: var(--gap);
         box-shadow: 0 0 5px rgb(0 0 0 / .5);
-        margin-bottom: var(--gap);
+        margin-bottom: var(--gap-h);
         transition: transform .25s;
 
         &:hover {
