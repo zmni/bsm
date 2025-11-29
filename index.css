@@ -294,7 +294,7 @@ section {
 /* PORTOFOLIO
  */
 .portofolio-gallery {
-    column-count: 2;
+    column-count: 3;
     column-gap: var(--gap);
 
     img {
