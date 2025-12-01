@@ -2,6 +2,10 @@ body {
     font-family: "Noto Sans", var(--bs-font-sans-serif);
 }
 
+a {
+    color: var(--bs-body-color);
+}
+
 .cursor-not-allowed {
     cursor: not-allowed;
 }
@@ -9,14 +13,11 @@ body {
 .nav-link,
 .swiper-pagination-bullet {
     &:hover {
-        background-color: rgb(255 255 0 / .5);
-    }
-    &.cursor-not-allowed {
-        cursor: not-allowed;
+        background-color: var(--bs-warning);
     }
 }
 .swiper-pagination {
-    --swiper-pagination-color: rgb(255 255 0 / .5);
+    --swiper-pagination-color: var(--bs-warning);
     --swiper-pagination-bullet-border-radius: 0;
     --swiper-pagination-bullet-horizontal-gap: 0;
     --swiper-pagination-bullet-inactive-color: transparent;
@@ -33,30 +34,21 @@ body {
     --bs-card-inner-border-radius: calc(var(--bs-card-border-radius) - (var(--bs-border-width)));
 }
 
-/*
+/* INTRO
  */
 .intro {
-    .nav-link {
-        &:active,
-        &:focus,
-        &:hover {
-            color: var(--bs-white);
-            text-shadow: 2px 2px 2px rgb(0 0 0 / .25);
-        }
-    }
     .intro-text {
         text-shadow: 2px 2px 2px rgb(0 0 0 / .25);
     }
 }
 
-/*
-*/
+/* STATS
+ */
 .stats {
     text-shadow: 2px 2px 2px rgb(0 0 0 / .25);
 }
 
-
-/*
+/* CLIENT
  */
 .client-list {
     img {
@@ -71,7 +63,7 @@ body {
     }
 }
 
-/*
+/* PORTOFOLIO
  */
 .portofolio {
     .gallery {
@@ -97,7 +89,7 @@ body {
     }
 }
 
-/*
+/* TESTIMONIAL
  */
 .testimonial {
     .card {
@@ -110,8 +102,11 @@ body {
     }
 }
 
-/*
+/* CONTACT
  */
+.kantor > p:hover .bi {
+    color: var(--bs-primary);
+}
 .wa-btn-float {
     position: fixed;
     right: 2rem;

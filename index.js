@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: '.js-work-nav',
             clickable: true,
-            renderBullet: (index, className) => `<span class="${className} d-inline-block px-2 py-1 rounded-3 text-reset">${workMenu[index]}</span>`
+            renderBullet: (index, className) => `<span class="${className} d-inline-block px-3 py-2 rounded-3">${workMenu[index]}</span>`
         }
     });
 
