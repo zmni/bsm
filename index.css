@@ -112,3 +112,24 @@ body {
 
 /*
  */
+.wa-btn-float {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+
+    height: 3.5rem;
+    width: 3.5rem;
+
+    transition: transform .25s;
+
+    z-index: 9999;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
