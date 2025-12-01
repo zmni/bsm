@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     // =============================================================================
     // MAIN MENU
@@ -148,110 +148,106 @@
     // =============================================================================
     // TESTIMONIAL
     // =============================================================================
-    // --- DEKLARASI VARIABEL DOM ---
+    // --- DEKLARASI VARIABEL DOM & STATE ---
     const testimonialWrapper = document.querySelector('.js-testimonial-wrapper');
     const testimonialButtonLeft = document.querySelector('.js-testimonial-button-left');
     const testimonialButtonRight = document.querySelector('.js-testimonial-button-right');
+
+    // Pastikan elemen ada sebelum melanjutkan
+    if (!testimonialWrapper || !testimonialButtonLeft || !testimonialButtonRight) {
+        console.error("Salah satu elemen testimonial tidak ditemukan.");
+        return;
+    }
+
     const scrollDistance = 300; // Jarak scroll untuk tombol navigasi
 
-    // --- STATE VARIABEL UNTUK DRAG TO SCROLL ---
-    let isDown = false; // Status apakah mouse sedang ditekan
-    let startX;         // Posisi X saat mouse mulai ditekan
-    let scrollLeft;     // Posisi scroll saat mouse mulai ditekan
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    const dragSpeedMultiplier = 2; // Faktor kecepatan drag
 
-    /**
-     * Fungsi untuk menggulir kontainer (digunakan oleh tombol)
-     * @param {number} amount - Jumlah piksel yang akan digulir (positif untuk kanan, negatif untuk kiri).
-     */
+    // --- FUNGSI UTAMA UNTUK GULIR (DIGUNAKAN TOMBOL) ---
     function scrollContainer(amount) {
         testimonialWrapper.scrollBy({
             left: amount,
             behavior: 'smooth'
         });
-        // checkScrollPosition() akan dipanggil otomatis oleh event 'scroll'
     }
 
-    // --- EVENT LISTENER UNTUK TOMBOL NAVIGASI ---
-    testimonialButtonLeft.addEventListener('click', () => {
-        scrollContainer(-scrollDistance);
-    });
-
-    testimonialButtonRight.addEventListener('click', () => {
-        scrollContainer(scrollDistance);
-    });
-
-    // --- SCROLL DENGAN MOUSE WHEEL ---
-    testimonialWrapper.addEventListener('wheel', (event) => {
-        // Memastikan guliran vertikal (bawaan browser) dinonaktifkan
-        event.preventDefault();
-
-        testimonialWrapper.scrollBy({
-            left: event.deltaY, // Menggunakan deltaY untuk scroll horizontal
-            behavior: 'auto'
-        });
-        // checkScrollPosition() // akan dipanggil otomatis oleh event 'scroll'
-    });
-
-    // --- DRAG TO SCROLL (MOUSE DOWN & MOBILE TOUCH) ---
-
-    // 1. MOUSE DOWN (Mulai Drag)
-    testimonialWrapper.addEventListener('mousedown', (e) => {
-        // Periksa apakah kontainer ada
-        if (!testimonialWrapper) return;
-
+    // --- FUNGSI INTI UNTUK MEMULAI DRAG/TOUCH ---
+    function handleStart(e) {
         isDown = true;
-        // Tambahkan kelas CSS untuk mengubah kursor
         testimonialWrapper.classList.add('active-drag');
 
-        // Catat posisi X awal kursor
-        startX = e.pageX - testimonialWrapper.offsetLeft;
-        // Catat posisi scroll saat ini
+        // Tentukan koordinat X: menggunakan e.pageX untuk mouse, atau e.touches[0].pageX untuk touch
+        const clientX = e.pageX || e.touches[0].pageX;
+
+        startX = clientX - testimonialWrapper.offsetLeft;
         scrollLeft = testimonialWrapper.scrollLeft;
-    });
+    }
 
-    // 2. MOUSE UP / MOUSE LEAVE (Akhiri Drag)
-    testimonialWrapper.addEventListener('mouseup', () => {
-        isDown = false;
-        // Hapus kelas CSS
-        testimonialWrapper.classList.remove('active-drag');
-    });
-
-    testimonialWrapper.addEventListener('mouseleave', () => {
+    // --- FUNGSI INTI UNTUK MENGAKHIRI DRAG/TOUCH ---
+    function handleEnd() {
         isDown = false;
         testimonialWrapper.classList.remove('active-drag');
-    });
+    }
 
-    // 3. MOUSE MOVE (Proses Dragging)
-    testimonialWrapper.addEventListener('mousemove', (e) => {
-        if (!isDown) return; // Stop fungsi jika mouse tidak sedang ditekan
+    // --- FUNGSI INTI UNTUK PERGERAKAN DRAG/TOUCH ---
+    function handleMove(e) {
+        if (!isDown) return;
+
+        // Mencegah pemilihan teks pada desktop, atau gulir vertikal default pada mobile
         e.preventDefault();
 
-        // Hitung jarak pergerakan X
-        const x = e.pageX - testimonialWrapper.offsetLeft;
-        // Hitung seberapa jauh harus scroll (faktor 2 agar lebih cepat)
-        const walk = (x - startX) * 2;
+        // Tentukan koordinat X
+        const clientX = e.pageX || e.touches[0].pageX;
 
-        // Terapkan posisi scroll baru
+        const x = clientX - testimonialWrapper.offsetLeft;
+        const walk = (x - startX) * dragSpeedMultiplier; // Menggunakan faktor pengali
+
         testimonialWrapper.scrollLeft = scrollLeft - walk;
-        // checkScrollPosition() akan dipanggil otomatis oleh event 'scroll'
+    }
+
+    // --- EVENT LISTENERS ---
+
+    // 1. Navigasi Tombol
+    testimonialButtonLeft.addEventListener('click', () => scrollContainer(-scrollDistance));
+    testimonialButtonRight.addEventListener('click', () => scrollContainer(scrollDistance));
+
+    // 2. Scroll Roda Mouse
+    testimonialWrapper.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        testimonialWrapper.scrollBy({
+            left: event.deltaY,
+            behavior: 'auto'
+        });
     });
 
-    // --- FUNGSI CHECK SCROLL POSITION ---
-    function checkScrollPosition() {
-        // Pastikan elemen ada sebelum diakses
-        if (!testimonialWrapper || !testimonialButtonLeft || !testimonialButtonRight) return;
+    // 3. Drag-to-Scroll (Mouse & Touch)
+    testimonialWrapper.addEventListener('mousedown', handleStart);
+    testimonialWrapper.addEventListener('touchstart', handleStart, { passive: true });
 
+    testimonialWrapper.addEventListener('mouseup', handleEnd);
+    testimonialWrapper.addEventListener('mouseleave', handleEnd);
+    testimonialWrapper.addEventListener('touchend', handleEnd);
+    testimonialWrapper.addEventListener('touchcancel', handleEnd);
+
+    testimonialWrapper.addEventListener('mousemove', handleMove);
+    testimonialWrapper.addEventListener('touchmove', handleMove);
+
+
+    // --- FUNGSI CHECK SCROLL POSITION (TETAP SAMA) ---
+    function checkScrollPosition() {
         const { scrollLeft, scrollWidth, clientWidth } = testimonialWrapper;
 
-        // Tombol Kiri: Sembunyikan jika sudah di posisi paling kiri
-        // Menggunakan kelas untuk fleksibilitas styling
+        // Tombol Kiri
         if (scrollLeft <= 5) {
             testimonialButtonLeft.classList.add('opacity-50', 'cursor-not-allowed');
         } else {
             testimonialButtonLeft.classList.remove('opacity-50', 'cursor-not-allowed');
         }
 
-        // Tombol Kanan: Sembunyikan jika sudah di posisi paling kanan
+        // Tombol Kanan
         if (scrollLeft + clientWidth >= scrollWidth - 5) {
             testimonialButtonRight.classList.add('opacity-50', 'cursor-not-allowed');
         } else {
@@ -260,9 +256,7 @@
     }
 
     // --- INISIALISASI ---
-    // Panggil saat halaman dimuat
     checkScrollPosition();
-    // Panggil setiap kali kontainer digulir
     testimonialWrapper.addEventListener('scroll', checkScrollPosition);
 
-// });
+});
