@@ -93,19 +93,31 @@ a {
  */
 .testimonial {
     .card {
-        max-width: 18.5rem;
+        max-width: calc(100vw - var(--bs-gutter-x));
         text-shadow: 2px 2px 2px rgb(0 0 0 / .25);
 
         @media (min-width: 768px) {
-            max-width: 21rem;
+            max-width: calc(720px / 2 - var(--bs-gutter-x));
+        }
+        @media (min-width: 992px) {
+            max-width: calc(960px / 3 - var(--bs-gutter-x));
+        }
+        @media (min-width: 1400px) {
+            max-width: calc(1320px / 4 - var(--bs-gutter-x));
         }
     }
 }
 
 /* CONTACT
  */
-.kantor > p:hover .bi {
-    color: var(--bs-primary);
+.contact a {
+    color: var(--bs-body-color);
+    text-decoration: none;
+}
+.kantor {
+    > p:hover .bi {
+        color: var(--bs-primary);
+    }
 }
 .wa-btn-float {
     position: fixed;
