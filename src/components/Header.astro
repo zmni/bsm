@@ -1,0 +1,31 @@
+---
+const { pathname } = Astro.url;
+
+const navs = [
+    { name: "Home", href: "/bsm" },
+    { name: "Work", href: "/bsm/work" },
+    { name: "Clients", href: "/bsm/clients" },
+    { name: "Portfolios", href: "/bsm/portfolios" },
+    { name: "Contact", href: "/bsm/contact" }
+];
+---
+
+<header class="shadow">
+    <div class="container mx-auto p-2 flex gap-4 max-sm:flex-col items-center">
+
+        <a href="/bsm">
+            <img class="size-12" src="/bsm/favicon-dark.svg">
+        </a>
+
+        <nav class="sm:ms-auto flex gap-1 justify-center sm:justify-end font-semibold uppercase">
+
+            {navs.map(nav => (
+
+            <a class={`p-1 md:px-3 md:py-2 md:rounded-md transition ${pathname === nav.href ? 'text-black max-md:shadow-[inset_0_-0.25rem] md:bg-yellow-300' : 'hover:text-black max-md:hover:shadow-[inset_0_-0.25rem] md:hover:bg-yellow-300'}`} href={nav.href}>{nav.name}</a>
+
+            ))}
+
+        </nav>
+
+    </div>
+</header>

@@ -1,0 +1,62 @@
+---
+import SectionWrap from './SectionWrap.astro';
+
+import alkaline from '../assets/klien/alkaline.svg';
+import bantul from '../assets/klien/bantul.png';
+import biznet from '../assets/klien/biznet.svg';
+import bpddiy from '../assets/klien/bpddiy.png';
+import citranet from '../assets/klien/citranet.png';
+import gojek from '../assets/klien/gojek.png';
+import grab from '../assets/klien/grab.png';
+import honda from '../assets/klien/honda.png';
+import kementrian from '../assets/klien/kementrian.png';
+import mitsubishi from '../assets/klien/mitsubishi.png';
+import pemda from '../assets/klien/pemda.svg';
+import pertamina from '../assets/klien/pertamina.svg';
+import rsud from '../assets/klien/rsud.png';
+import telkom from '../assets/klien/telkom.png';
+import traveloka from '../assets/klien/traveloka.svg';
+import umy from '../assets/klien/umy.svg';
+import SectionHead from './SectionHead.astro';
+---
+
+<SectionWrap>
+
+    <SectionHead
+        title="Our Clients",
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    />
+
+    <main class="max-w-(--breakpoint-md) mx-auto flex flex-col gap-8">
+
+        <div class="flex flex-wrap gap-8 justify-center">
+            <img class="max-h-20" src={kementrian.src} alt="Kementrian Koordinator Bidang Perekonomian Republik Indonesia">
+            <img class="max-h-20" src={pemda.src} alt="Pemda Yogyakarta">
+            <img class="max-h-20" src={bantul.src} alt=" Badan Pengelolaan Keuangan Pendapatan dan Aset Daerah">
+        </div>
+
+        <div class="flex flex-wrap gap-8 justify-center">
+            <img class="max-h-11" src={telkom.src} alt="Telkom">
+            <img class="max-h-11" src={pertamina.src} alt="Pertamina">
+            <img class="max-h-11" src={gojek.src} alt="Gojek">
+            <img class="max-h-11" src={grab.src} alt="Grab">
+        </div>
+
+        <div class="flex flex-wrap gap-8 justify-center">
+            <img class="max-h-11" src={honda.src} alt="Honda">
+            <img class="max-h-11" src={mitsubishi.src} alt="Mitsubishi">
+            <img class="max-h-11" src={alkaline.src} alt="ABC Alkaline">
+            <img class="max-h-11" src={rsud.src} alt="RSUD Panembahan Senopati">
+            <img class="max-h-11" src={umy.src} alt="Universitas Muhammadiyah Yogyakarta">
+            <img class="max-h-11" src={bpddiy.src} alt="BPD DIY">
+        </div>
+
+        <div class="flex flex-wrap gap-8 justify-center">
+            <img class="max-h-11" src={traveloka.src} alt="Traveloka">
+            <img class="max-h-11" src={biznet.src} alt="Biznet">
+            <img class="max-h-11" src={citranet.src} alt="Citranet">
+        </div>
+
+    </main>
+
+</SectionWrap>

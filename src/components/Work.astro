@@ -1,0 +1,56 @@
+---
+import SectionWrap from './SectionWrap.astro';
+import SectionHead from './SectionHead.astro';
+
+import billboardImg from '../assets/work/billboard/1.jpg';
+import brandingImg from '../assets/work/branding/1.jpg';
+import interiorImg from '../assets/work/interior/1.jpg';
+
+const kerjaan = [
+    {
+        tipe: "Billboard",
+        deskripsi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        href: "/work/billboard",
+        gambar: billboardImg
+    },
+    {
+        tipe: "Branding",
+        deskripsi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        href: "/work/branding",
+        gambar: brandingImg
+    },
+    {
+        tipe: "Interior",
+        deskripsi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        href: "/work/interior",
+        gambar: interiorImg
+    }
+];
+---
+
+<SectionWrap>
+
+    <SectionHead
+        title="Our Work",
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    />
+
+    <main class="grid gap-4 lg:gap-8 md:grid-cols-3">
+
+        {kerjaan.map(kerja => (
+
+        <a href={kerja.href} title={kerja.tipe}>
+            <div class="rounded-xl bg-gray-200 border border-black/15 transform transition-transform duration-300 hover:scale-102">
+                <img class="w-full rounded-t-xl aspect-4/3 object-cover" src={kerja.gambar.src} alt={kerja.tipe} loading="lazy"/>
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">{kerja.tipe}</h3>
+                    <p>{kerja.deskripsi}</p>
+                </div>
+            </div>
+        </a>
+
+        ))}
+
+    </main>
+
+</SectionWrap>

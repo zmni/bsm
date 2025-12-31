@@ -1,0 +1,142 @@
+---
+import SectionWrap from '../components/SectionWrap.astro';
+import SectionHead from '../components/SectionHead.astro';
+
+const testimonials = [
+    { nama: "Rudi Reynold", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "Direktur PT. Lorem Dol" },
+    { nama: "Siti Aminah", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "Manajer PT. Lorem Dol" },
+    { nama: "Budi Santoso", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "HR Lorem Impsum Corp" },
+    { nama: "Agus Prasetyo", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "Manajer Lorem Dol" },
+    { nama: "Dewi Lestari", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "Owner CV. Lorem Dol" },
+    { nama: "Dimas Jaya", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "Manajer PT. Lorem" },
+    { nama: "Bagoes Kresnawan", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "Manajer PT. Lorem Dol" },
+    { nama: "Akari Ruanda Jati", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "Direktur CV. Lorem Dol" },
+    { nama: "Reina Mara", testi: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", jabatan: "HR Lorem Dol Corp" }
+];
+---
+
+<SectionWrap>
+
+    <SectionHead
+        title="Testimonials"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    />
+
+    <!-- <nav class="flex gap-2 justify-center mb-8">
+        <button class="js-testimonial-button-left" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="size-10" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+            </svg>
+        </button>
+        <button class="js-testimonial-button-right" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="size-10" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+        </button>
+    </nav> -->
+
+    <!-- <main class="overflow-x-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div class="flex gap-x-4 overflow-x-hidden select-none js-testimonial-wrapper"> -->
+    <main class="grid gap-4 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-3">
+        <!-- <div class="rounded-xl border border-black/15 bg-gray-200 shrink-0 max-w-full md:max-w-[calc((100%-1rem)/2)] lg:max-w-[calc((100%-2rem)/3)] 2xl:max-w-[calc((100%-3rem)/4)] js-testimonial-item"> -->
+            {testimonials.map(t => (
+                <div class="rounded-xl border border-black/15 bg-gray-200">
+                    <blockquote class="p-4">
+                        <p class="text-xl">{t.testi}</p>
+                    </blockquote>
+                    <div class="p-4 flex items-center border-t border-black/15">
+                        <svg class="size-16 text-green-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                        <div class="ms-4">
+                            <p class="text-2xl font-semibold">{t.nama}</p>
+                            <p>{t.jabatan}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}
+    </main>
+        <!-- </div>
+    </main> -->
+
+    <!--<script type="module">
+        const wrapper = document.querySelector('.js-testimonial-wrapper');
+        const item = wrapper?.querySelector('.js-testimonial-item');
+        const btnLeft = document.querySelector('.js-testimonial-button-left');
+        const btnRight = document.querySelector('.js-testimonial-button-right');
+
+        if (!wrapper || !item || !btnLeft || !btnRight) {
+            console.warn('Testimonials elements not found, skipping JS.');
+        } else {
+            const gap = 16;
+            let scrollDistance = item.offsetWidth + gap;
+            let isDown = false, startX, scrollLeft;
+
+            const scrollContainer = (amount) => wrapper.scrollBy({ left: amount, behavior: 'smooth' });
+
+            const handleStart = e => {
+                isDown = true;
+                wrapper.classList.add('active-drag');
+                const clientX = e.pageX ?? e.touches?.[0]?.pageX;
+                startX = clientX - wrapper.offsetLeft;
+                scrollLeft = wrapper.scrollLeft;
+            };
+
+            const handleEnd = () => {
+                if (isDown) snapToNearest();
+                isDown = false;
+                wrapper.classList.remove('active-drag');
+            };
+
+            const handleMove = e => {
+                if (!isDown) return;
+                e.preventDefault();
+                const clientX = e.pageX ?? e.touches?.[0]?.pageX;
+                wrapper.scrollLeft = scrollLeft - ((clientX - wrapper.offsetLeft - startX) * 2);
+            };
+
+            const checkScrollPosition = () => {
+                const { scrollLeft, scrollWidth, clientWidth } = wrapper;
+                const atStart = scrollLeft <= 5;
+                const atEnd = scrollLeft + clientWidth >= scrollWidth - 5;
+                btnLeft.classList.toggle('opacity-50', atStart);
+                btnLeft.classList.toggle('cursor-not-allowed', atStart);
+                btnRight.classList.toggle('opacity-50', atEnd);
+                btnRight.classList.toggle('cursor-not-allowed', atEnd);
+            };
+
+            const snapToNearest = () => {
+                const cards = wrapper.querySelectorAll('.js-testimonial-item');
+                let closest = 0;
+                let minDiff = Infinity;
+                cards.forEach(card => {
+                    const diff = Math.abs(wrapper.scrollLeft - card.offsetLeft);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        closest = card.offsetLeft;
+                    }
+                });
+                wrapper.scrollTo({ left: closest, behavior: 'smooth' });
+            };
+
+            btnLeft.addEventListener('click', () => scrollContainer(-scrollDistance));
+            btnRight.addEventListener('click', () => scrollContainer(scrollDistance));
+
+            wrapper.addEventListener('wheel', e => {
+                e.preventDefault();
+                wrapper.scrollBy({ left: e.deltaY, behavior: 'auto' });
+            }, { passive: false });
+
+            wrapper.addEventListener('mousedown', handleStart);
+            wrapper.addEventListener('touchstart', handleStart, { passive: true });
+            ['mouseup','mouseleave','touchend','touchcancel'].forEach(e => wrapper.addEventListener(e, handleEnd));
+            wrapper.addEventListener('mousemove', handleMove);
+            wrapper.addEventListener('touchmove', handleMove, { passive: false });
+            wrapper.addEventListener('scroll', checkScrollPosition);
+
+            checkScrollPosition();
+        }
+    </script>-->
+
+</SectionWrap>

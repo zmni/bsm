@@ -1,0 +1,116 @@
+---
+interface StatItem {
+    label: string;
+    final: number;
+    unit?: string;
+    divisor?: number;
+    precision?: number;
+    duration?: number;
+}
+
+const stats: StatItem[] = [
+    { label: 'Years of Experience', final: 10, duration: 2500 },
+    { label: 'Strategic Point', final: 1000, unit: 'K+', divisor: 1000, duration: 1500 },
+    { label: 'Happy Clients', final: 10000, unit: 'K+', divisor: 1000, duration: 1000 },
+    { label: 'Approval Rating', final: 4.9, precision: 1, duration: 2000 },
+];
+---
+
+<section class="px-4 py-16 bg-blue-100">
+
+    <ul
+        class="container max-w-(--breakpoint-lg) mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 md:max-lg:gap-8 text-center"
+        data-stats
+    >
+        {stats.map((stat, i) => (
+            <li>
+                <div class="num text-5xl font-semibold">
+                    <span
+                        data-counter
+                        data-final={stat.final}
+                        data-unit={stat.unit ?? ''}
+                        data-divisor={stat.divisor ?? 1}
+                        data-precision={stat.precision ?? 0}
+                        data-duration={stat.duration ?? 2000}
+                        data-index={i}
+                    >
+                        0
+                    </span>
+                </div>
+                <div class="desc">{stat.label}</div>
+            </li>
+        ))}
+    </ul>
+
+    <script type="module">
+        const container = document.querySelector('[data-stats]');
+        const counters = container.querySelectorAll('[data-counter]');
+
+        const formatNumber = (v, p) => {
+            return new Intl.NumberFormat('de-DE', {
+                minimumFractionDigits: p,
+                maximumFractionDigits: p
+            }).format(v);
+        };
+
+        const shortenNumber = (v, unit) => {
+            if (unit === 'K+') return (v / 1000).toFixed(0) + 'K+';
+            return v.toString();
+        };
+
+        const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+
+        const animateCounter = (counter) => {
+            const final = parseFloat(counter.dataset.final);
+            const unit = counter.dataset.unit ?? '';
+            const precision = parseInt(counter.dataset.precision ?? 0);
+            const duration = parseInt(counter.dataset.duration ?? 2000);
+            const index = parseInt(counter.dataset.index ?? 0);
+
+            const staggerDelay = index * 150; // delay otomatis berdasarkan index
+            let start = null;
+            let lastUpdate = 0;
+
+            const step = time => {
+                if (!start) start = time;
+                if (time - lastUpdate < 16) { // batasi ~60fps
+                    requestAnimationFrame(step);
+                    return;
+                }
+                lastUpdate = time;
+
+                let progress = (time - start - staggerDelay) / duration;
+                if (progress < 0) progress = 0; // tunggu delay
+                progress = Math.min(progress, 1);
+                progress = easeOutCubic(progress);
+
+                const currentValue = final * progress;
+                counter.textContent = formatNumber(currentValue, precision);
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    counter.textContent = shortenNumber(final, unit);
+                }
+            };
+
+            requestAnimationFrame(step);
+        };
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => animateCounter(counter));
+                    } else {
+                        counters.forEach(counter => (counter.textContent = '0'));
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(container);
+    </script>
+
+</section>

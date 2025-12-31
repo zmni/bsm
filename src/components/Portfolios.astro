@@ -1,0 +1,72 @@
+---
+import SectionWrap from "./SectionWrap.astro";
+import SectionHead from "./SectionHead.astro";
+
+import { Image } from "astro:assets";
+
+const TOTAL_IMAGES = 16;
+const MIN_WIDTH = 320;
+const MAX_WIDTH = 384;
+const MIN_HEIGHT = 384;
+const MAX_HEIGHT = 680;
+const SAFE_PICSUM_IDS = [
+    10, 20, 30, 40, 50, 60, 70, 80, 90, 100,
+    110, 120, 130, 140, 150, 160, 170, 180, 190, 200
+];
+const FALLBACK_ID = 1;
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function pickUniqueIds(source, count) {
+    return [...source].sort(() => Math.random() - 0.5).slice(0, count);
+}
+
+const images = pickUniqueIds(SAFE_PICSUM_IDS, TOTAL_IMAGES).map((id) => {
+    const width = getRandomInt(MIN_WIDTH, MAX_WIDTH);
+    const height = getRandomInt(MIN_HEIGHT, MAX_HEIGHT);
+
+    return {
+        id,
+        width,
+        height,
+        src: `https://picsum.photos/id/${id}/${width}/${height}`,
+        fallback: `https://picsum.photos/id/${FALLBACK_ID}/${width}/${height}`,
+        blur: `https://picsum.photos/id/${id}/20/20`,
+        alt: `Portfolio #${id}`
+    };
+});
+---
+
+<SectionWrap>
+
+    <SectionHead
+        title="Our Portfolios",
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    />
+
+    <main class="max-w-(--breakpoint-xl) mx-auto columns-2 md:columns-3 lg:columns-5 xl:columns-6 gap-4">
+        {images.map((image) => (
+            <div
+                class="mb-4 overflow-hidden rounded-xl border border-black/15 bg-cover bg-center transform transition-transform duration-300 hover:scale-110"
+                style={`
+                    background-image:url('${image.blur}');
+                    aspect-ratio:${image.width}/${image.height};
+                `}
+            >
+                <Image
+                    src={image.src}
+                    width={image.width}
+                    height={image.height}
+                    alt={image.alt}
+                    loading="lazy"
+                    class="gallery-img w-full h-full object-cover opacity-0 transition-opacity duration-500"
+                    onload="this.classList.add('opacity-100')"
+                    onerror={`this.onerror=null;this.src='${image.fallback}'`}
+                />
+            </div>
+        ))}
+    </main>
+
+</SectionWrap>

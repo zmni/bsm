@@ -1,0 +1,46 @@
+---
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import SectionHead from "../../components/SectionHead.astro";
+import SectionWrap from "../../components/SectionWrap.astro";
+import WorkNav from "../../components/WorkNav.astro";
+import Separator from "../../components/Separator.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import image1 from '../../assets/work/billboard/1.jpg';
+import image2 from '../../assets/work/billboard/2.jpg';
+import image3 from '../../assets/work/billboard/3.jpg';
+---
+
+<Layout
+    title="Work - Billboard | Bintang Surya Mandiri",
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+>
+
+    <Header/>
+
+    <SectionWrap>
+
+        <SectionHead
+            title="Billboard",
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            pclass="max-w-(--breakpoint-md)"
+        />
+
+        <WorkNav/>
+
+        <main class="grid gap-8 md:grid-cols-3 md:grid-rows-2">
+
+            <img class="md:col-span-2 md:row-span-2 rounded-xl border border-black/15 w-full object-cover aspect-4/3" src={image1.src} alt="" loading="lazy">
+            <img class="md:col-start-3 rounded-xl border border-black/15 w-full object-cover aspect-4/3" src={image2.src} alt="" loading="lazy">
+            <img class="md:col-start-3 md:row-start-2 rounded-xl border border-black/15 w-full object-cover aspect-4/3" src={image3.src} alt="" loading="lazy">
+
+        </main>
+
+    </SectionWrap>
+
+    <Separator/>
+
+    <Footer/>
+
+</Layout>
